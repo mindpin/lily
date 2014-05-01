@@ -1,0 +1,60 @@
+// example.css 包含示例页面所需的样式
+// 这些央视通常不会用于其他项目
+
+body.lily-example-doc {
+
+  .example-section {
+    margin-bottom: 60px;
+  }
+
+  .example {
+    margin-bottom:15px;
+  }
+
+  .example-typography {
+    position:relative;
+    padding:45px 15px 15px;
+    border: $border-color-default solid 1px;
+
+    &:before {
+      content: "示例样式";
+      color: $black-40;
+      position: absolute;
+      height:20px;line-height:20px;
+      top:20px;
+    }
+
+    table {
+      margin-bottom: 0;
+    }
+
+    table td {
+      padding:15px 0;
+      vertical-align: middle;
+      h1, h2, h3, h4, h5, h6 {margin: 0;}
+      span.info {color:$black-40;}
+    }
+
+    table tr:first-child td {
+      border-top: 0 none;
+    }
+  }
+
+  .code-highlight {
+    padding:9px 14px;
+    border:solid 1px $border-color-default;
+    background-color:#f8f8f9;
+    margin-bottom:20px;
+
+    pre {
+      background-color: transparent;
+      color: $text-color-default;
+      padding:0;margin:0;
+      border:0 none;
+    }
+  }
+
+  .example + .code-highlight {
+    margin-top:-16px;
+  }
+}

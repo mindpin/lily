@@ -1,0 +1,111 @@
+// _consts.scss 
+// =================
+// 放置了一些基础常量
+// 这些基础常量被其他的样式设定所引用
+
+
+// 颜色
+// -----------------
+// 网页元素背景，文字等会用到的颜色，包含多级灰度
+// 所有常量都添加了 !default 声明，这样在其他工程引用时，可以覆盖常量的默认值
+
+$body-background-color: #fff !default;
+
+$black-10: darken(#fff, 10%) !default; // #e6e6e6
+$black-20: darken(#fff, 20%) !default; // #cccccc
+$black-30: darken(#fff, 30%) !default; // #b3b3b3
+$black-40: darken(#fff, 40%) !default; // #999999
+$black-50: darken(#fff, 50%) !default; // #808080
+$black-60: darken(#fff, 60%) !default; // #666666
+$black-70: darken(#fff, 70%) !default; // #4d4d4d
+$black-80: darken(#fff, 80%) !default; // #333333
+$black-90: darken(#fff, 90%) !default; // #191919
+
+$border-color-default: #ddd !default;
+
+// 文字
+// -----------------
+// 正文和标题文字的字体，字号，行高，颜色，等等
+
+$text-color-default:  $black-80 !default;
+$link-color: #4183c4 !default;
+// $link-color: #0072D6 !default;
+$link-hover-color: darken($link-color, 15%) !default;
+
+$font-family-sans-serif: 
+  "Helvetica Neue", "Helvetica", "Arial", "sans-serif", "微软雅黑" !default;
+$font-family-serif:
+  "Georgia", "Times New Roman", "Times", "serif", "微软雅黑" !default;
+// 等宽字体用在 <code> <pre> 等标签中用于显示代码
+$font-family-monospace:
+  "Menlo", "Monaco", "Consolas", "Courier New", "monospace", "微软雅黑" !default;
+$font-family-default: $font-family-sans-serif !default;
+
+$font-size-default:   14px !default;
+$font-size-large:     round($font-size-default * 1.29) !default; // 14 * 1.29 = 18.06 ~ 18px
+$font-size-small:     round($font-size-default * 0.86) !default; // 14 * 0.86 = 12.04 ~ 12px
+
+$font-size-h1:        round($font-size-default * 2.57) !default; // 14 * 2.57 = 35.98 ~ 36px
+$font-size-h2:        round($font-size-default * 2.14) !default; // 14 * 2.14 = 29.96 ~ 30px
+$font-size-h3:        round($font-size-default * 1.71) !default; // 14 * 1.71 = 23.94 ~ 24px
+$font-size-h4:        round($font-size-default * 1.29) !default; // 14 * 1.29 = 18.06 ~ 18px
+$font-size-h5:        round($font-size-default * 1.14) !default; // 14 * 1.14 = 15.96 ~ 16px
+$font-size-h6:        $font-size-default !default;               // ~14px
+
+$line-height-default: 1.428571429 !default; // 20px / 14
+// 有一些地方和行高有倍乘关系，但是单位是像素值，于是就拿这个来计算
+$line-height-in-px:   round($font-size-default * $line-height-default) !default;
+
+// 标题
+$headings-font-family: $font-family-default !default;
+$headings-font-weight: 500 !default; // 500 在一般浏览器里相当于 normal，在高像素设备上会有更精细显示
+$headings-line-height: 1.1 !default;
+$headings-color:       $text-color-default !default;
+
+$headings-small-color: $black-40 !default;
+
+
+// 圆角和其他修饰
+// --------------
+$border-radius-default: 4px;
+
+
+// 表格
+// ----------------
+// 表格用到的一些常量
+
+// 单元格 <td> <th> 的内间距
+$table-cell-padding: round($font-size-default * 0.57) !default; // 14 * 0.57 = 7.98 ~ 8px
+// 紧凑型表格的单元格内间距，用于 .table.table-compact;
+$table-compact-cell-padding: round($font-size-default * 0.36) !default; // 14 * 0.36 = 5.04 ~ 5px
+
+$table-background-color: transparent !default;
+// .table.table-striped 带有的斑马效果单元格背景色
+$table-background-color-zebra: #f9f9f9 !default;  
+// .table.table-hover 带有的鼠标响应背景色
+$table-background-color-hover: #f5f5f5 !default;  
+$table-background-color-active: $table-background-color-hover !default;  
+
+$table-border-color: $border-color-default !default;
+
+
+// 代码
+// ----------------------
+// 代码显示用到的样式
+
+// 夹杂在文字中间的 code
+// $code-color:                #c7254e !default;
+// $code-background-color:     #f9f2f4 !default;
+
+$code-color:                #3f7faf !default;
+$code-background-color:     #f2f7f9 !default;
+
+// kbd 参考 http://www.w3school.com.cn/tags/tag_kbd.asp
+$kbd-color:                 #fff !default;
+$kbd-background-color:      $black-80 !default;
+
+// 代码段
+$pre-color:                 #f5f5f5 !default;
+$pre-background-color:      $black-80 !default;
+$pre-border-color:          $black-20 !default;
+$pre-scrollable-max-height: 340px !default;

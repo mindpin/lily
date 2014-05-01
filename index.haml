@@ -1,0 +1,173 @@
+!!!
+%html{:lang => :zh}
+  %head
+    %meta{:'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
+    %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'}
+    %title Lily
+
+    %link{:media => 'screen', :rel => 'stylesheet', :type => 'text/css', :href => 'css/lily.css'}
+
+  %body.lily-example-doc
+
+    .example-section
+      %h1 Why Lily?
+      %p.lead
+        我们的域名是 4ye.me, 而产品名称是“四叶草”。Lily 是百合花的意思，都是植物，用来做开发框架的名称应该还算合适。<br/>
+        Lily 从 Bootstrap 吸取了很多思路，可以把它看作是 MINDPIN 团队对 Bootstrap 进行了精简，大量定制与扩展的工作成果。
+
+      %h3 为什么不直接用 Bootstrap?
+      %p 因为以下的几点原因：
+      %ul
+        %li Bootstrap 在某些场景有些冗余；
+        %li Bootstrap 中的许多组件的外观设计和我们所倾向的扁平化设计风格存在差异；
+        %li 为了达到更好的视觉效果，我们需要定义更多的 scss 常量；
+        %li 许多设计排版的样式数值之间的关系需要细致的关联与调整；
+        %li 我们需要自己实现更适合我们使用的 javascript 效果库；
+
+
+    .example-section
+      %h1 概述
+      %p.lead
+        Lily 目前用于和将用于 MINDPIN 团队的 web 产品的开发。它将以 git submodule 或者 封装到 Ruby Gem 中的形式引用到其他工程里。基于 Lily 进行开发，需要了解 SASS 和 CoffeeScript. 并且强烈建议了解 HAML.
+
+      %h3 SASS, CoffeeScript 和 HAML
+      %p
+        SASS 对应 CSS; CoffeeScript 对应 JavaScript; HAML 对应 HTML; 他们都是对原始语法的增强和扩充。在现代 web 开发技术中十分常用。
+
+      %ul
+        %li
+          %span SASS 参考：
+          %a{:href => 'http://www.w3cplus.com/sassguide/syntax.html', :target => '_blank'} http://www.w3cplus.com/sassguide/syntax.html
+        %li
+          %span CoffeeScript 参考：
+          %a{:href => 'http://coffeescript.org/', :target => '_blank'} http://coffeescript.org/
+        %li
+          %span HAML 参考：
+          %a{:href => 'http://haml.info/', :target => '_blank'} http://haml.info/
+
+      %h3 HTML5 顶部声明
+      %p Lily 以 HTML5 标准下的现代浏览器（Chrome / Firefox / IE9+ / Safari 等）为基准进行设计。并且，文字编码应为 UTF-8。强烈建议所有 web 页面代码应该以此代码作为顶部声明：
+      .code-highlight
+        %pre
+          %code.html
+            = preserve do
+              :escaped
+                <!DOCTYPE html>
+                <html lang='zh'>
+                  <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+                  ...
+                </html>
+      %p 在 haml 里，对应的写法是（为简化起见，下文一般不再写 haml 对应代码）：
+      .code-highlight
+        %pre
+          %code.haml
+            = preserve do
+              :escaped
+                !!!
+                %html{:lang => :zh}
+                  %head
+                    %meta{:'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
+
+      %h3 移动设备显示支持
+      %p 
+        %span 为了在移动设备上更好地呈现页面效果，需要在页面代码的
+        %code 
+          :escaped
+            <head>
+        %span 部分增加一个包含
+        %b viewport
+        %span 信息的
+        %code 
+          :escaped
+            <meta>
+        %span 声明。当允许手势缩放页面时，采用这样的声明：
+      .code-highlight
+        %pre
+          %code.html
+            = preserve do
+              :escaped
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+      %p
+        %span 当声明中包含
+        %code user-scalable=no
+        %span 时，手势缩放将被禁止。在某些场景下，需要 web 页面在移动设备上的体验更接近原生应用，此时就需要进行这样的声明：
+      .code-highlight
+        %pre
+          %code.html
+            = preserve do
+              :escaped
+                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      %p
+        %span 关于 viewport 特性，以及 Device Adaptation 可参考：
+        %a{:href => 'http://s.4ye.me/yNWDei', :target => '_blank'} http://s.4ye.me/yNWDei
+        %br
+        %span 以及参考：
+        %a{:href => 'http://s.4ye.me/JWzCj1', :target => '_blank'} http://s.4ye.me/JWzCj1
+
+      %h3 常量定义
+      %p 
+        %span 通过使用 SASS 来封装样式表，我们自己定义了许多样式常量。这些样式常量可以被复用到任何地方。所有的样式常量都添加了
+        %code
+          :escaped
+            !default
+        %span 声明。其他工程在引用这些样式时，可以以其他的值覆盖这些常量。
+
+    .example.example-typography
+      %table.table
+        %tbody
+          %tr
+            %td
+              %h1 
+                %span h1. 这是一级标题
+                %small 这是小标题
+            %td
+              %span.info font-size ~ 36px
+          %tr
+            %td
+              %h2 
+                %span h2. 这是二级标题
+                %small 这是小标题
+            %td
+              %span.info font-size ~ 30px
+          %tr
+            %td
+              %h3 
+                %span h3. 这是三级标题
+                %small 这是小标题
+            %td
+              %span.info font-size ~ 24px
+          %tr
+            %td
+              %h4 
+                %span h4. 这是四级标题
+                %small 这是小标题
+            %td
+              %span.info font-size ~ 18px
+          %tr
+            %td
+              %h5 
+                %span h5. 这是五级标题
+                %small 这是小标题
+            %td
+              %span.info font-size ~ 16px
+          %tr
+            %td
+              %h6 
+                %span h6. 这是六级标题
+                %small 这是小标题
+            %td
+              %span.info font-size ~ 14px
+    .code-highlight
+      %pre
+        %code.html
+          = preserve do
+            :escaped
+              <h1><span>h1. 这是一级标题</span><small>这是小标题</small></h1>
+              <h2><span>h2. 这是二级标题</span><small>这是小标题</small></h2>
+              <h3><span>h3. 这是三级标题</span><small>这是小标题</small></h3>
+              <h4><span>h4. 这是四级标题</span><small>这是小标题</small></h4>
+              <h5><span>h5. 这是五级标题</span><small>这是小标题</small></h5>
+              <h6><span>h6. 这是六级标题</span><small>这是小标题</small></h6>
+
+    / %script{:type => 'text/javascript', :src => 'ui/lib/jquery-2.1.0.min.js'}
+    / %script{:type => 'text/javascript', :src => 'ui/ui.js'}
