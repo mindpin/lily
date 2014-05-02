@@ -14,5 +14,7 @@ FSSM.monitor(directory, '**/*.haml') do
     command = "haml #{input} #{output}"
     %x{#{command}}
     puts "Regenerated #{input} to #{output}"
+
+    %x{haml index.haml index.html}
   end
 end
