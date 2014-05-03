@@ -28,17 +28,6 @@ a {
   height: 0;
   line-height: 0; }
 
-.lead {
-  margin-bottom: 20px;
-  font-size: 16px;
-  font-weight: 200;
-  line-height: 1.4; }
-
-.header-title {
-  padding-bottom: 9px;
-  margin: 40px 0 20px;
-  border-bottom: solid 1px #e6e6e6; }
-
 .readable-line {
   max-width: 588px; }
 
@@ -99,6 +88,41 @@ h6, .h6 {
 
 p {
   margin: 0 0 10px; }
+
+.lead {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.4; }
+  @media (min-width: 768px) {
+    .lead {
+      font-size: 21px; } }
+
+small, .small {
+  font-size: 85%; }
+
+cite {
+  font-style: normal; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.text-justify {
+  text-align: justify; }
+
+.text-quiet {
+  color: #999999; }
+
+.header-title {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: solid 1px #e6e6e6; }
 
 ul, ol {
   margin-top: 0;
@@ -248,7 +272,8 @@ pre {
     .container {
       width: 1170px; } }
 
-.container-fluid {
+.container-fluid,
+.container-full {
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -256,10 +281,13 @@ pre {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-  .container-fluid:before, .container-fluid:after {
+  .container-fluid:before, .container-fluid:after,
+  .container-full:before,
+  .container-full:after {
     content: "";
     display: table; }
-  .container-fluid:after {
+  .container-fluid:after,
+  .container-full:after {
     clear: both; }
 
 .row {

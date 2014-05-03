@@ -155,7 +155,107 @@
             <h3>多级弹性自适应定宽</h3>
             <p>在不同宽度的设备上，我们希望网页能呈现出合适的样式，但是又不希望增加太多重复编码。幸好目前已经有了相对比较靠谱的解决方法。即弹性自适应布局。</p>
             <p>借助 CSS3 的 Media Queries 机制，我们不使用任何 JavaScript 就可以实现期望的布局：当屏幕宽度在某个值以下时，这样显示，而在某个值以上时，那样显示。</p>
-            <p>这里有一些很好的网页范例：http://mediaqueri.es/</p>
+            <p>
+              <span>这里有一些很好的网页范例：</span>
+              <a href='http://mediaqueri.es/'>http://mediaqueri.es/</a>
+            </p>
+            <p>Lily 使用以下的 SASS 声明来实现弹性自适应：</p>
+            <div class='code-highlight'>
+              <pre><code class='scss'>@media (min-width: $screen-pad-min) {&#x000A;  width: $container-pad;&#x000A;}&#x000A;@media (min-width: $screen-desk-min) {&#x000A;  width: $container-desk;&#x000A;}&#x000A;@media (min-width: $screen-wide-min) {&#x000A;  width: $container-wide;&#x000A;}</code></pre>
+            </div>
+            <p>
+              <span>其中，三个宽度等级的默认取值分别为：</span>
+              <code>$screen-pad-min: 768px;</code>
+              <code>$screen-desk-min: 992px;</code>
+              <code>$screen-wide-min: 1200px;</code>
+              <br>
+              <span>而三种屏幕宽度等级下的容器固定宽度取值为：</span>
+              <code>$container-pad: 720px;</code>
+              <code>$container-desk: 970px;</code>
+              <code>$container-wide: 1170px;</code>
+              <br>
+              <span>以上代码的含义是：</span>
+            </p>
+            <ul>
+              <li>当屏幕宽度大于等于 1200px 时，容器取定宽 1170px</li>
+              <li>当屏幕宽度大于等于 992px 而小于 1200px 时，容器取定宽 970px</li>
+              <li>当屏幕宽度大于等于 768px 而小于 992px 时，容器取定宽 750px</li>
+              <li>当屏幕宽度小于 768px 时，容器宽度等于 100% 屏幕宽度</li>
+            </ul>
+            <p><span>这也就是所谓的</span><strong>多级弹性自适应定宽</strong><span>了。</span></p>
+            <p>
+              <span>关于这种设计，有人又称他为响应式设计，参考：</span>
+              <a href='http://s.4ye.me/FaC5Fb'>http://s.4ye.me/FaC5Fb</a>
+            </p>
+            <h3>默认的网格参数</h3>
+            <p>Lily 默认的网格参数和 Bootstrap 保持一致，这样可以兼容一些增强 Bootstrap 的设计方案和组件。</p>
+            <table class='table table-bordered table-striped'>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>
+                    <span>很小的屏幕</span>
+                    <div class='small'>手机 (<768px)</div>
+                  </th>
+                  <th>
+                    <span>较小屏幕</span>
+                    <div class='small'>平板电脑 (<992px)</div>
+                  </th>
+                  <th>
+                    <span>一般屏幕</span>
+                    <div class='small'>普通显示器 (<1200px)</div>
+                  </th>
+                  <th>
+                    <span>宽屏幕</span>
+                    <div class='small'>宽屏显示器 (>=1200px)</div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>容器宽度</th>
+                  <td>100%</td>
+                  <td>750px</td>
+                  <td>970px</td>
+                  <td>1170px</td>
+                </tr>
+                <tr>
+                  <th>样式名</th>
+                  <td>
+                    <code>.col-phone-</code>
+                  </td>
+                  <td>
+                    <code>.col-pad-</code>
+                  </td>
+                  <td>
+                    <code>.col-desk-</code>
+                  </td>
+                  <td>
+                    <code>.col-wide-</code>
+                  </td>
+                </tr>
+                <tr>
+                  <th>网格列数</th>
+                  <td colspan='4'>12</td>
+                </tr>
+                <tr>
+                  <th>每列宽度</th>
+                  <td>自动。全屏宽度减去间隔值再除以 12</td>
+                  <td>(750 - 30) / 12 = 60px</td>
+                  <td>(970 - 30) / 12 ~= 78px</td>
+                  <td>(1170 - 30) / 12 = 95px</td>
+                </tr>
+                <tr>
+                  <th>间隔值(grid-gap)</th>
+                  <td colspan='4'>30px</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              <span>网格样式被设计为向上适应，如果用</span>
+              <code>.col-desk-</code>
+              <span>来声明网格宽度，则在小尺寸屏幕上，此网格宽度不生效，而在大尺寸屏幕上，如果没有特别声明网格宽度，则网格宽度也按此向上适应。（比较绕，看例子说明好了。）</span>
+            </p>
           </div>
           <div class='example-section'>
             <h1 class='header-title'>文字排印</h1>

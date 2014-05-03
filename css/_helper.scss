@@ -9,21 +9,6 @@
   font-size:0;height:0;line-height:0;
 }
 
-// 网页引文，一般放在大标题下面
-.lead {
-  margin-bottom: $line-height-in-px;
-  font-size: round($font-size-default * 1.14);
-  font-weight: 200;
-  line-height: 1.4;
-}
-
-// 网页头标
-.header-title {
-  padding-bottom: $line-height-in-px / 2 - 1px;
-  margin: $line-height-in-px * 2 0 $line-height-in-px;
-  border-bottom: solid 1px $page-title-border-color;
-}
-
 // 为了保持文字可读，限制容器最大宽度
 .readable-line {
   max-width: $readable-line-width;

@@ -10,7 +10,7 @@ lily
 ```
 scss --watch .
 coffee --watch --compile */*.coffee
-ruby watch_haml.rb .
+ruby watch_index_haml.rb .
 ```
 
 ----------------
