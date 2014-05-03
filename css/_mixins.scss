@@ -24,3 +24,78 @@
 @mixin square($size) {
   @include size($size, $size);
 }
+
+
+// CSS3 属性的多浏览器兼容
+// -----------
+// CSS3 中的一些属性在各浏览器由私有属性声明，为了简化编码，把它们都封装成了 mixin
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+     -moz-box-sizing: $boxmodel;
+          box-sizing: $boxmodel;
+}
+
+@mixin border-box {
+  @include box-sizing(border-box);
+}
+
+
+// _grid.scss
+// ----------
+
+@mixin container-fixed {
+  margin-left:    auto;
+  margin-right:   auto;
+  padding-left:   $grid-gap / 2;
+  padding-right:  $grid-gap / 2;
+  @include clearfix;
+  @include border-box;
+}
+
+@mixin make-row($gap: $grid-gap) {
+  margin-left:  $gap / -2;
+  margin-right: $gap / -2;
+  @include clearfix;
+  @include border-box;
+}
+
+@mixin make-grid-columns {
+  $i: 1;
+  $list: ".col-phone-#{$i}, .col-pad-#{$i}, .col-desk-#{$i}, .col-wide-#{$i}";
+  @for $i from 2 through $grid-columns {
+    $list: "#{$list},
+    .col-phone-#{$i}, .col-pad-#{$i}, .col-desk-#{$i}, .col-wide-#{$i}"
+  }
+  #{$list} {
+    position: relative;
+    min-height: 1px;
+    padding-left: $grid-gap / 2;
+    padding-right: $grid-gap / 2;
+    float: left;
+    @include border-box;
+  }
+}
+
+@mixin make-grid($class) {
+  @include loop-grid-columns($grid-columns, $class, "width");
+  @include loop-grid-columns($grid-columns, $class, "left");
+  @include loop-grid-columns($grid-columns, $class, "right");
+  @include loop-grid-columns($grid-columns, $class, "margin-left");
+}
+
+@mixin loop-grid-columns($columns, $class, $type) {
+  @for $index from 1 through $columns {
+    
+    @if $type == "width" {
+      .col-#{$class}-#{$index} {
+        #{$type}: percentage($index / $columns);
+      }
+    }
+
+    @else {
+      .col-#{$class}-#{$type}-#{$index} {
+        #{$type}: percentage($index / $columns);
+      }
+    }
+  }
+}

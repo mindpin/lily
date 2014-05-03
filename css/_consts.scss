@@ -45,13 +45,15 @@ $link-color: #4183c4 !default;
 // $link-color: #0072D6 !default;
 $link-hover-color: darken($link-color, 15%) !default;
 
+$font-family-cn: "微软雅黑";
+
 $font-family-sans-serif: 
-  "Helvetica Neue", "Helvetica", "Arial", "sans-serif", "微软雅黑" !default;
+  "Helvetica Neue", "Helvetica", "Arial", "sans-serif", $font-family-cn !default;
 $font-family-serif:
-  "Georgia", "Times New Roman", "Times", "serif", "微软雅黑" !default;
+  "Georgia", "Times New Roman", "Times", "serif", $font-family-cn !default;
 // 等宽字体用在 <code> <pre> 等标签中用于显示代码
 $font-family-monospace:
-  "Menlo", "Monaco", "Consolas", "Courier New", "monospace", "微软雅黑" !default;
+  "Menlo", "Monaco", "Consolas", "Courier New", "monospace", $font-family-cn !default;
 $font-family-default: $font-family-sans-serif !default;
 
 $font-size-default:   14px !default;
@@ -65,7 +67,10 @@ $font-size-h4:        round($font-size-default * 1.29) !default; // 14 * 1.29 = 
 $font-size-h5:        round($font-size-default * 1.14) !default; // 14 * 1.14 = 15.96 ~ 16px
 $font-size-h6:        $font-size-default !default;               // ~14px
 
-$line-height-default: 1.428571429 !default; // 20px / 14
+// $line-height-default: 1.428571429 !default; // 20px / 14
+// bug fix sass decimal digits
+// sass 只保留 5 位小数位数
+$line-height-default: 1.42858 !default;
 // 有一些地方和行高有倍乘关系，但是单位是像素值，于是就拿这个来计算
 $line-height-in-px:   round($font-size-default * $line-height-default) !default;
 
@@ -76,6 +81,8 @@ $headings-line-height: 1.1 !default;
 $headings-color:       $text-color-default !default;
 
 $headings-small-color: $black-40 !default;
+
+$page-title-border-color: $black-10 !default;
 
 
 // 圆角和其他修饰
@@ -104,12 +111,11 @@ $table-border-color: $border-color-default !default;
 
 // 代码
 // ----------------------
-// 代码显示用到的样式
+// 代码显示样式定义用到的常量
 
 // 夹杂在文字中间的 code
 // $code-color:                #c7254e !default;
 // $code-background-color:     #f9f2f4 !default;
-
 $code-color:                #3f7faf !default;
 $code-background-color:     #f2f7f9 !default;
 
@@ -122,3 +128,47 @@ $pre-color:                 #f5f5f5 !default;
 $pre-background-color:      $black-80 !default;
 $pre-border-color:          $black-20 !default;
 $pre-scrollable-max-height: 340px !default;
+
+
+// 媒体查询 (media queries) 分隔点
+// ----------------
+// 以这些尺寸来区分不同的屏幕宽度
+
+// 最小的屏幕，智能手机
+$screen-phone-min:  480px !default; // 3.5 寸 android 手机屏款
+
+// 大一些的屏幕，平板电脑
+$screen-pad-min:    768px !default; // IPAD2 屏宽
+
+// 一般的屏幕，笔记本电脑，小显示器的台式机
+$screen-desk-min:   992px !default;
+
+// 宽屏显示器，台式机，电视
+$screen-wide-min:   1200px !default;
+
+$screen-phone-max:  $screen-pad-min - 1px !default;
+$screen-pad-max:    $screen-desk-min - 1px !default;
+$screen-desk-max:   $screen-wide-min - 1px !default;
+
+
+// 网格结构
+// ------------
+// 网格结构样式定义用到的常量
+$grid-columns: 12 !default;
+$grid-gap: round($font-size-default * 2.143) !default; // 14 * 2.143 = 30.002 ~ 30px
+
+
+// 多级自适应宽度
+// 最小的屏幕：智能手机，宽度只有全屏宽，没有定宽，所以没有定义相应常量
+
+$container-pad:   720px + $grid-gap !default;
+$container-desk:  940px + $grid-gap !default;
+$container-wide:  1140px + $grid-gap !default;
+
+
+// 中文
+
+// 为了便于阅读，中文的每行字数应在 35 ~ 45 之间，
+// 这个常量定义了满足此条件的容器宽度
+$readable-line-chars: 42;
+$readable-line-width: $font-size-default * $readable-line-chars !default;

@@ -14,66 +14,17 @@
     %link{:media => 'screen', :rel => 'stylesheet', :type => 'text/css', :href => 'css/lily.css'}
 
   %body.lily-example-doc
-    = render_file 'example/why_lily.haml'
-    = render_file 'example/overflow.haml'
-    = render_file 'example/consts.haml'
 
-    .example.example-typography
-      %table.table
-        %tbody
-          %tr
-            %td
-              %h1 
-                %span h1. 这是一级标题
-                %small 这是小标题
-            %td
-              %span.info font-size ~ 36px
-          %tr
-            %td
-              %h2 
-                %span h2. 这是二级标题
-                %small 这是小标题
-            %td
-              %span.info font-size ~ 30px
-          %tr
-            %td
-              %h3 
-                %span h3. 这是三级标题
-                %small 这是小标题
-            %td
-              %span.info font-size ~ 24px
-          %tr
-            %td
-              %h4 
-                %span h4. 这是四级标题
-                %small 这是小标题
-            %td
-              %span.info font-size ~ 18px
-          %tr
-            %td
-              %h5 
-                %span h5. 这是五级标题
-                %small 这是小标题
-            %td
-              %span.info font-size ~ 16px
-          %tr
-            %td
-              %h6 
-                %span h6. 这是六级标题
-                %small 这是小标题
-            %td
-              %span.info font-size ~ 14px
-    .code-highlight
-      %pre
-        %code.html
-          = preserve do
-            :escaped
-              <h1><span>h1. 这是一级标题</span><small>这是小标题</small></h1>
-              <h2><span>h2. 这是二级标题</span><small>这是小标题</small></h2>
-              <h3><span>h3. 这是三级标题</span><small>这是小标题</small></h3>
-              <h4><span>h4. 这是四级标题</span><small>这是小标题</small></h4>
-              <h5><span>h5. 这是五级标题</span><small>这是小标题</small></h5>
-              <h6><span>h6. 这是六级标题</span><small>这是小标题</small></h6>
+    .container
+      .row
+        .col-desk-9
+          = render_file 'example/lily.haml'
+          = render_file 'example/overflow.haml'
+          = render_file 'example/grid.haml'
+          = render_file 'example/typography.haml'
+          = render_file 'example/consts.haml'
+        .col-desk-3
+          我是占位文字
 
     / %script{:type => 'text/javascript', :src => 'ui/lib/jquery-2.1.0.min.js'}
     / %script{:type => 'text/javascript', :src => 'ui/ui.js'}

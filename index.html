@@ -7,214 +7,311 @@
     <link href='css/lily.css' media='screen' rel='stylesheet' type='text/css'>
   </head>
   <body class='lily-example-doc'>
-    <div class='example-section'>
-      <h1>Why Lily?</h1>
-      <p class='lead'>
-        我们的域名是 4ye.me, 而产品名称是“四叶草”。Lily 是百合花的意思，都是植物，用来做开发框架的名称应该还算合适。<br/>
-        Lily 从 Bootstrap 吸取了很多思路，可以把它看作是 MINDPIN 团队对 Bootstrap 进行了精简，大量定制与扩展的工作成果。
-      </p>
-      <h3>为什么不直接用 Bootstrap?</h3>
-      <p>因为以下的几点原因：</p>
-      <ul>
-        <li>Bootstrap 在某些场景有些冗余；</li>
-        <li>Bootstrap 中的许多组件的外观设计和我们所倾向的扁平化设计风格存在差异；</li>
-        <li>为了达到更好的视觉效果，我们需要定义更多的 scss 常量；</li>
-        <li>许多设计排版的样式数值之间的关系需要细致的关联与调整；</li>
-        <li>我们需要自己实现更适合我们使用的 javascript 效果库；</li>
-      </ul>
-    </div>
-    <div class='example-section'>
-      <h1>概述</h1>
-      <p class='lead'>
-        Lily 目前用于和将用于 MINDPIN 团队的 web 产品的开发。它将以 git submodule 或者 封装到 Ruby Gem 中的形式引用到其他工程里。基于 Lily 进行开发，需要了解 SASS 和 CoffeeScript. 并且强烈建议了解 HAML.
-      </p>
-      <h3>SASS, CoffeeScript 和 HAML</h3>
-      <p>
-        SASS 对应 CSS; CoffeeScript 对应 JavaScript; HAML 对应 HTML; 他们都是对原始语法的增强和扩充。在现代 web 开发技术中十分常用。
-      </p>
-      <ul>
-        <li>
-          <span>SASS 参考：</span>
-          <a href='http://www.w3cplus.com/sassguide/syntax.html' target='_blank'>http://www.w3cplus.com/sassguide/syntax.html</a>
-        </li>
-        <li>
-          <span>CoffeeScript 参考：</span>
-          <a href='http://coffeescript.org/' target='_blank'>http://coffeescript.org/</a>
-        </li>
-        <li>
-          <span>HAML 参考：</span>
-          <a href='http://haml.info/' target='_blank'>http://haml.info/</a>
-        </li>
-      </ul>
-      <h3>HTML5 顶部声明</h3>
-      <p>Lily 以 HTML5 标准下的现代浏览器（Chrome / Firefox / IE9+ / Safari 等）为基准进行设计。并且，文字编码应为 UTF-8。强烈建议所有 web 页面代码应该以此代码作为顶部声明：</p>
-      <div class='code-highlight'>
-        <pre><code class='html'>&lt;!DOCTYPE html&gt;&#x000A;&lt;html lang='zh'&gt;&#x000A;  &lt;meta content='text/html; charset=utf-8' http-equiv='Content-Type'&gt;&#x000A;  ...&#x000A;&lt;/html&gt;</code></pre>
-      </div>
-      <p>在 haml 里，对应的写法是（为简化起见，下文一般不再写 haml 对应代码）：</p>
-      <div class='code-highlight'>
-        <pre><code class='haml'>!!!&#x000A;%html{:lang =&gt; :zh}&#x000A;  %head&#x000A;    %meta{:'http-equiv' =&gt; 'Content-Type', :content =&gt; 'text/html; charset=utf-8'}</code></pre>
-      </div>
-      <h3>移动设备显示支持</h3>
-      <p>
-        <span>为了在移动设备上更好地呈现页面效果，需要在页面代码的</span>
-        <code>&lt;head&gt;</code>
-        <span>部分增加一个包含</span>
-        <b>viewport</b>
-        <span>信息的</span>
-        <code>&lt;meta&gt;</code>
-        <span>声明。当允许手势缩放页面时，采用这样的声明：</span>
-      </p>
-      <div class='code-highlight'>
-        <pre><code class='html'>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</code></pre>
-      </div>
-      <p>
-        <span>当声明中包含</span>
-        <code>user-scalable=no</code>
-        <span>时，手势缩放将被禁止。在某些场景下，需要 web 页面在移动设备上的体验更接近原生应用，此时就需要进行这样的声明：</span>
-      </p>
-      <div class='code-highlight'>
-        <pre><code class='html'>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;</code></pre>
-      </div>
-      <p>
-        <span>关于 viewport 特性，以及 Device Adaptation 可参考：</span>
-        <a href='http://s.4ye.me/yNWDei' target='_blank'>http://s.4ye.me/yNWDei</a>
-        <br>
-        <span>以及参考：</span>
-        <a href='http://s.4ye.me/JWzCj1' target='_blank'>http://s.4ye.me/JWzCj1</a>
-      </p>
-    </div>
-    <div class='example-section consts'>
-      <h1>常量定义</h1>
-      <p class='lead'>
-        <span>通过使用 SASS 来封装样式表，我们自己定义了许多样式常量。这些样式常量可以被复用到任何地方。所有的样式常量都添加了</span>
-        <code>!default</code>
-        <span>声明。其他工程在引用这些样式时，可以以其他的值覆盖这些常量。</span>
-      </p>
-      <h3>颜色常量</h3>
-      <p>
-        <span>Lily 中提供了一组灰度颜色常量，共九个。分别对应从</span>
-        <code>#ffffff</code>
-        <span>到</span>
-        <code>#000000</code>
-        <span>中间不同灰度的九个色值。</span>
-      </p>
-      <div class='example'>
-        <div class='color-consts'>
-          <div class='color-const black-10'></div>
-          <div class='color-const black-20'></div>
-          <div class='color-const black-30'></div>
-          <div class='color-const black-40'></div>
-          <div class='color-const black-50'></div>
-          <div class='color-const black-60'></div>
-          <div class='color-const black-70'></div>
-          <div class='color-const black-80'></div>
-          <div class='color-const black-90'></div>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-desk-9'>
+          <div class='example-section'>
+            <h1 class='header-title'>什么是 Lily?</h1>
+            <p class='lead'>
+              我们的域名是 4ye.me, 而产品名称是“四叶草”。<br/>
+              Lily 是百合花的意思，和四叶草一样都是植物，用来做开发框架的名称应该还算合适。<br/>
+              Lily 从 Bootstrap 吸取了很多思路，增加了一些东西，也删减了一些东西。<br/>
+              可以把它看作是 MINDPIN 团队对 Bootstrap 进行了改良的工作成果。
+            </p>
+            <h3>为什么不直接用 Bootstrap?</h3>
+            <p>因为以下的几点原因：</p>
+            <ul>
+              <li>Bootstrap 的 CSS 代码有些冗余。我觉得其中包含了许多不必要的内容；</li>
+              <li>Bootstrap 中的许多组件的外观设计和我所倾向的扁平化设计风格存在差异；</li>
+              <li>
+                <span>Bootstrap 强制所有元素的盒模型为</span>
+                <code>box-sizing: border-box</code>
+                <span>。<br/></span>
+                对于一些需要精确控制像素的前端场景，我倾向于按需使用这个属性，或者采用
+                <code>calc()</code>
+                <span>机制，而不是全局强制。</span>
+              </li>
+              <li>为了达到更好的视觉效果，我们需要定义更多的 SASS 常量；</li>
+              <li>许多设计排版的样式数值之间的关系需要细致的关联与调整；</li>
+              <li>我们需要自己实现更适合我们使用的 JavaScript 效果库；</li>
+              <li>我们需要对于中文网页的一些特性做出适应与改良；</li>
+            </ul>
+          </div>
+          <div class='example-section'>
+            <h1 class='header-title'>概述</h1>
+            <p class='lead'>
+              Lily 目前用于和将用于 MINDPIN 团队的 web 产品的开发。<br/>
+              它将以 git submodule 或者 封装到 Ruby Gem 中的形式引用到其他工程里。<br/>
+              基于 Lily 进行开发，需要了解 SASS 和 CoffeeScript. 并且强烈建议了解 HAML.
+            </p>
+            <h3>SASS, CoffeeScript 和 HAML</h3>
+            <p>
+              SASS 对应 CSS; CoffeeScript 对应 JavaScript; HAML 对应 HTML; <br/>
+              他们都是对原始语法的增强和扩充，在现代 web 开发技术中十分常用。
+            </p>
+            <ul>
+              <li>
+                <span>SASS 参考：</span>
+                <a href='http://www.w3cplus.com/sassguide/syntax.html' target='_blank'>http://www.w3cplus.com/sassguide/syntax.html</a>
+              </li>
+              <li>
+                <span>CoffeeScript 参考：</span>
+                <a href='http://coffeescript.org/' target='_blank'>http://coffeescript.org/</a>
+              </li>
+              <li>
+                <span>HAML 参考：</span>
+                <a href='http://haml.info/' target='_blank'>http://haml.info/</a>
+              </li>
+            </ul>
+            <h3>HTML5 顶部声明</h3>
+            <p>
+              <span>Lily 以 HTML5 标准下的现代浏览器（Chrome / Firefox / IE9+ / Safari 等）为基准进行设计。</span>
+              <br>
+              <span>并且，文字编码应为 UTF-8。强烈建议所有 web 页面代码应该以此代码作为顶部声明：</span>
+            </p>
+            <div class='code-highlight'>
+              <pre><code class='html'>&lt;!DOCTYPE html&gt;&#x000A;&lt;html lang='zh'&gt;&#x000A;  &lt;meta content='text/html; charset=utf-8' http-equiv='Content-Type'&gt;&#x000A;  ...&#x000A;&lt;/html&gt;</code></pre>
+            </div>
+            <p>在 haml 里，对应的写法是（为简化起见，下文一般不再写 haml 对应代码）：</p>
+            <div class='code-highlight'>
+              <pre><code class='haml'>!!!&#x000A;%html{:lang =&gt; :zh}&#x000A;  %head&#x000A;    %meta{:'http-equiv' =&gt; 'Content-Type', :content =&gt; 'text/html; charset=utf-8'}</code></pre>
+            </div>
+            <h3>移动设备显示支持</h3>
+            <p>
+              <span>为了在移动设备上更好地呈现页面效果，需要在页面代码的</span>
+              <code>&lt;head&gt;</code>
+              <span>部分增加一个包含</span>
+              <b>viewport</b>
+              <span>信息的</span>
+              <code>&lt;meta&gt;</code>
+              <span>声明。<br/></span>
+              当允许手势缩放页面时，采用这样的声明：
+            </p>
+            <div class='code-highlight'>
+              <pre><code class='html'>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</code></pre>
+            </div>
+            <p>
+              <span>当声明中包含</span>
+              <code>user-scalable=no</code>
+              <span>时，手势缩放将被禁止。</span>
+              <br>
+              <span>在某些场景下，需要 web 页面在移动设备上的体验更接近原生应用，此时就需要进行这样的声明：</span>
+            </p>
+            <div class='code-highlight'>
+              <pre><code class='html'>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;</code></pre>
+            </div>
+            <p>
+              <span>关于 viewport 特性，以及 Device Adaptation</span>
+              <br>
+              <span>可参考：</span>
+              <a href='http://s.4ye.me/yNWDei' target='_blank'>http://s.4ye.me/yNWDei</a>
+              <br>
+              <span>以及参考：</span>
+              <a href='http://s.4ye.me/JWzCj1' target='_blank'>http://s.4ye.me/JWzCj1</a>
+            </p>
+          </div>
+          <div class='example-section'>
+            <h1 class='header-title'>网格结构</h1>
+            <p class='lead'>
+              有人喜欢管 Grid 叫栅格，但我还是喜欢称他为网格。网格结构是一种行之有效的（但未必是完美的）平面排版设计原则（包括网页和纸媒）。在当下的网页设计理念中，为了兼容不同设备上的显示效果，通常会采用多级固定自适应宽度或全屏 + 网格结构的设计思路。能更有效地兼容从宽屏显示器到智能手机屏幕等多种场合。
+            </p>
+            <h3>基本概念</h3>
+            <p>网格结构可以这样理解：页面自上而下分为多个容器（container），例如当一个页面同时具有顶部导航，中间内容和底部页脚时，可以看做页面由三个容器构成。其中顶部导航和底部页脚可能是全屏宽度，而中间内容是固定有限宽度。</p>
+            <p>每个容器又分为多个行（row）与列（col），容器宽度被横向分为多个网格，每个列的宽度一般是整数个网格。所有的网页内容，包括文字，图片，多媒体组件，都排布在这些网格之中。形成一种视觉上的整齐，有秩序的观感。网格结构设计的另一个好处时，它非常兼容语义化的 HTML 文档结构。</p>
+            <ul>
+              <li>
+                <span>容器的宽度有两种设定，分别是</span>
+                <code>.container</code>
+                <span>（多级弹性自适应定宽）和</span>
+                <code>.container-full</code>
+                <span>（全屏宽）。其中，多级弹性自适应定宽的含义是，他会根据不同显示器的屏幕宽度，来调整具体的定宽宽度，分为几个不同的“档位”；</span>
+              </li>
+              <li>
+                <code>.container</code>
+                <span>中可以放置多个</span>
+                <code>.row</code>
+                <span>元素；</span>
+              </li>
+              <li>
+                <code>.row</code>
+                <span>可以放置多个</span>
+                <code>.col-#{class}-#{width}</code>
+                <span>元素。网格类型 (class) 有四种，分别是</span>
+                <code>phone</code>
+                <code>pad</code>
+                <code>desk</code>
+                <code>wide</code>
+              </li>
+              <li>
+                <span>相邻的 col 之间存在视觉间距。这个视觉间距由常量</span>
+                <code>$grid-gap</code>
+                <span>指定，默认是 30px.</span>
+              </li>
+              <li>
+                每个 row 中默认的网格数是 12. 每个 col 占据的网格宽度可以是 1 ~ 12.
+              </li>
+            </ul>
+            <p>关于网格结构的具体使用方法，下文会写出范例。</p>
+            <h3>多级弹性自适应定宽</h3>
+            <p>在不同宽度的设备上，我们希望网页能呈现出合适的样式，但是又不希望增加太多重复编码。幸好目前已经有了相对比较靠谱的解决方法。即弹性自适应布局。</p>
+            <p>借助 CSS3 的 Media Queries 机制，我们不使用任何 JavaScript 就可以实现期望的布局：当屏幕宽度在某个值以下时，这样显示，而在某个值以上时，那样显示。</p>
+            <p>这里有一些很好的网页范例：http://mediaqueri.es/</p>
+          </div>
+          <div class='example-section'>
+            <h1 class='header-title'>文字排印</h1>
+            <p class='lead'>
+              《CSS 禅意花园》(CSS Zen Garden: The Beauty of CSS Design) 的中文版上，把 typography 翻译为“文字排印”。我还是比较喜欢这个翻译的。
+            </p>
+            <h3>HTML 标题</h3>
+            <p>
+              <span>HTML 标题标签包含</span>
+              <code>&lt;h1&gt;</code>
+              <span>到</span>
+              <code>&lt;h6&gt;</code>
+              <span>. 同时，也可以以</span>
+              <code>.h1</code>
+              <span>到</span>
+              <code>.h6</code>
+              <span>的样式名来把普通的 div, span 元素变为标题样式。</span>
+            </p>
+            <div class='example example-typography'>
+              <table class='table'>
+                <tbody>
+                  <tr>
+                    <td>
+                      <h1>
+                        <span>h1. 这是一级标题</span>
+                        <small>这是小标题</small>
+                      </h1>
+                    </td>
+                    <td>
+                      <span class='info'>font-size ~ 36px</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h2>
+                        <span>h2. 这是二级标题</span>
+                        <small>这是小标题</small>
+                      </h2>
+                    </td>
+                    <td>
+                      <span class='info'>font-size ~ 30px</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h3>
+                        <span>h3. 这是三级标题</span>
+                        <small>这是小标题</small>
+                      </h3>
+                    </td>
+                    <td>
+                      <span class='info'>font-size ~ 24px</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h4>
+                        <span>h4. 这是四级标题</span>
+                        <small>这是小标题</small>
+                      </h4>
+                    </td>
+                    <td>
+                      <span class='info'>font-size ~ 18px</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h5>
+                        <span>h5. 这是五级标题</span>
+                        <small>这是小标题</small>
+                      </h5>
+                    </td>
+                    <td>
+                      <span class='info'>font-size ~ 16px</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h6>
+                        <span>h6. 这是六级标题</span>
+                        <small>这是小标题</small>
+                      </h6>
+                    </td>
+                    <td>
+                      <span class='info'>font-size ~ 14px</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class='code-highlight'>
+              <pre><code class='html'>&lt;h1&gt;&lt;span&gt;h1. 这是一级标题&lt;/span&gt;&lt;small&gt;这是小标题&lt;/small&gt;&lt;/h1&gt;&#x000A;&lt;h2&gt;&lt;span&gt;h2. 这是二级标题&lt;/span&gt;&lt;small&gt;这是小标题&lt;/small&gt;&lt;/h2&gt;&#x000A;&lt;h3&gt;&lt;span&gt;h3. 这是三级标题&lt;/span&gt;&lt;small&gt;这是小标题&lt;/small&gt;&lt;/h3&gt;&#x000A;&lt;h4&gt;&lt;span&gt;h4. 这是四级标题&lt;/span&gt;&lt;small&gt;这是小标题&lt;/small&gt;&lt;/h4&gt;&#x000A;&lt;h5&gt;&lt;span&gt;h5. 这是五级标题&lt;/span&gt;&lt;small&gt;这是小标题&lt;/small&gt;&lt;/h5&gt;&#x000A;&lt;h6&gt;&lt;span&gt;h6. 这是六级标题&lt;/span&gt;&lt;small&gt;这是小标题&lt;/small&gt;&lt;/h6&gt;</code></pre>
+            </div>
+          </div>
+          <div class='example-section consts'>
+            <h1 class='header-title'>常量定义</h1>
+            <p class='lead'>
+              <span>通过使用 SASS 来封装样式表，我们自己定义了许多样式常量。这些样式常量可以被复用到任何地方。所有的样式常量都添加了</span>
+              <code>!default</code>
+              <span>声明。其他工程在引用这些样式时，可以以其他的值覆盖这些常量。</span>
+            </p>
+            <h3>颜色常量</h3>
+            <p>
+              <span>Lily 中提供了一组灰度颜色常量，共九个。分别对应从</span>
+              <code>#ffffff</code>
+              <span>到</span>
+              <code>#000000</code>
+              <span>中间不同灰度的九个色值。</span>
+            </p>
+            <div class='example'>
+              <div class='color-consts'>
+                <div class='color-const black-10'></div>
+                <div class='color-const black-20'></div>
+                <div class='color-const black-30'></div>
+                <div class='color-const black-40'></div>
+                <div class='color-const black-50'></div>
+                <div class='color-const black-60'></div>
+                <div class='color-const black-70'></div>
+                <div class='color-const black-80'></div>
+                <div class='color-const black-90'></div>
+              </div>
+            </div>
+            <div class='code-highlight'>
+              <pre><code class='scss'>$black-10: darken(#fff, 10%) !default; // #e6e6e6&#x000A;$black-20: darken(#fff, 20%) !default; // #cccccc&#x000A;$black-30: darken(#fff, 30%) !default; // #b3b3b3&#x000A;$black-40: darken(#fff, 40%) !default; // #999999&#x000A;$black-50: darken(#fff, 50%) !default; // #808080&#x000A;$black-60: darken(#fff, 60%) !default; // #666666&#x000A;$black-70: darken(#fff, 70%) !default; // #4d4d4d&#x000A;$black-80: darken(#fff, 80%) !default; // #333333&#x000A;$black-90: darken(#fff, 90%) !default; // #191919</code></pre>
+            </div>
+            <p>
+              <span>Lily 中提供了一些语义颜色常量，其中五个基础颜色常量名参照 Bootstrap, 但是颜色值有所差别，饱和度略高一些。另外还增补了若干颜色常量，如果有需要会添加更多进来。</span>
+            </p>
+            <div class='example'>
+              <div class='color-consts'>
+                <div class='color-const area-primary'></div>
+                <div class='color-const area-success'></div>
+                <div class='color-const area-info'></div>
+                <div class='color-const area-warning'></div>
+                <div class='color-const area-danger'></div>
+                <div class='color-const area-hot'></div>
+                <div class='color-const area-night'></div>
+                <div class='color-const area-dawn'></div>
+                <div class='color-const area-fresh'></div>
+                <div class='color-const area-forest'></div>
+                <div class='color-const area-dream'></div>
+              </div>
+            </div>
+            <div class='code-highlight'>
+              <pre><code class='scss'>$area-primary: #2A70E8 !default;&#x000A;$area-success: #4CC85E !default;&#x000A;$area-info:    #44B2F5 !default;&#x000A;$area-warning: #FFCC3F !default;&#x000A;$area-danger:  #F15837 !default;&#x000A;&#x000A;$area-hot:     #FF4400 !default;&#x000A;$area-night:   #2E333F !default;&#x000A;$area-dawn:    #FFFBE3 !default;&#x000A;$area-fresh:   #6FBC00 !default;&#x000A;$area-forest:  #009800 !default;&#x000A;$area-dream:   #6f5499 !default;</code></pre>
+            </div>
+            <p>这些颜色值常量可以用在其他工程的任何地方。以 SASS 变量的形式来引用。当然，从网页设计保持简洁明快的角度来说，一个网页用到的颜色趋于单一为好，所以这些颜色常量也只是给出一些可能的选择。</p>
+            <div class='code-highlight'>
+              <pre><code class='scss'>a.follow {&#x000A;  background-color: $area-success;&#x000A;}&#x000A;&#x000A;$desc-bg-color: $area-dawn;&#x000A;.desc {&#x000A;  background-color: $desc-bg-color;&#x000A;}</code></pre>
+            </div>
+          </div>
+        </div>
+        <div class='col-desk-3'>
+          我是占位文字
         </div>
       </div>
-      <div class='code-highlight'>
-        <pre><code class='scss'>$black-10: darken(#fff, 10%) !default; // #e6e6e6&#x000A;$black-20: darken(#fff, 20%) !default; // #cccccc&#x000A;$black-30: darken(#fff, 30%) !default; // #b3b3b3&#x000A;$black-40: darken(#fff, 40%) !default; // #999999&#x000A;$black-50: darken(#fff, 50%) !default; // #808080&#x000A;$black-60: darken(#fff, 60%) !default; // #666666&#x000A;$black-70: darken(#fff, 70%) !default; // #4d4d4d&#x000A;$black-80: darken(#fff, 80%) !default; // #333333&#x000A;$black-90: darken(#fff, 90%) !default; // #191919</code></pre>
-      </div>
-      <p>
-        <span>Lily 中提供了一些语义颜色常量，其中五个基础颜色常量名参照 Bootstrap, 但是颜色值有所差别，饱和度略高一些。另外还增补了若干颜色常量，如果有需要会添加更多进来。</span>
-      </p>
-      <div class='example'>
-        <div class='color-consts'>
-          <div class='color-const area-primary'></div>
-          <div class='color-const area-success'></div>
-          <div class='color-const area-info'></div>
-          <div class='color-const area-warning'></div>
-          <div class='color-const area-danger'></div>
-          <div class='color-const area-hot'></div>
-          <div class='color-const area-night'></div>
-          <div class='color-const area-dawn'></div>
-          <div class='color-const area-fresh'></div>
-          <div class='color-const area-forest'></div>
-          <div class='color-const area-dream'></div>
-        </div>
-      </div>
-      <div class='code-highlight'>
-        <pre><code class='scss'>$area-primary: #2A70E8 !default;&#x000A;$area-success: #4CC85E !default;&#x000A;$area-info:    #44B2F5 !default;&#x000A;$area-warning: #FFCC3F !default;&#x000A;$area-danger:  #F15837 !default;&#x000A;&#x000A;$area-hot:     #FF4400 !default;&#x000A;$area-night:   #2E333F !default;&#x000A;$area-dawn:    #FFFBE3 !default;&#x000A;$area-fresh:   #6FBC00 !default;&#x000A;$area-forest:  #009800 !default;&#x000A;$area-dream:   #6f5499 !default;</code></pre>
-      </div>
-      <p>这些颜色值常量可以用在其他工程的任何地方。以 SASS 变量的形式来引用。当然，从网页设计保持简洁明快的角度来说，一个网页用到的颜色趋于单一为好，所以这些颜色常量也只是给出一些可能的选择。</p>
-      <div class='code-highlight'>
-        <pre><code class='scss'>a.follow {&#x000A;  background-color: $area-success;&#x000A;}&#x000A;&#x000A;$desc-bg-color: $area-dawn;&#x000A;.desc {&#x000A;  background-color: $desc-bg-color;&#x000A;}</code></pre>
-      </div>
-    </div>
-    <div class='example example-typography'>
-      <table class='table'>
-        <tbody>
-          <tr>
-            <td>
-              <h1>
-                <span>h1. 这是一级标题</span>
-                <small>这是小标题</small>
-              </h1>
-            </td>
-            <td>
-              <span class='info'>font-size ~ 36px</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h2>
-                <span>h2. 这是二级标题</span>
-                <small>这是小标题</small>
-              </h2>
-            </td>
-            <td>
-              <span class='info'>font-size ~ 30px</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h3>
-                <span>h3. 这是三级标题</span>
-                <small>这是小标题</small>
-              </h3>
-            </td>
-            <td>
-              <span class='info'>font-size ~ 24px</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h4>
-                <span>h4. 这是四级标题</span>
-                <small>这是小标题</small>
-              </h4>
-            </td>
-            <td>
-              <span class='info'>font-size ~ 18px</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h5>
-                <span>h5. 这是五级标题</span>
-                <small>这是小标题</small>
-              </h5>
-            </td>
-            <td>
-              <span class='info'>font-size ~ 16px</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h6>
-                <span>h6. 这是六级标题</span>
-                <small>这是小标题</small>
-              </h6>
-            </td>
-            <td>
-              <span class='info'>font-size ~ 14px</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class='code-highlight'>
-      <pre><code class='html'>&lt;h1&gt;&lt;span&gt;h1. 这是一级标题&lt;/span&gt;&lt;small&gt;这是小标题&lt;/small&gt;&lt;/h1&gt;&#x000A;&lt;h2&gt;&lt;span&gt;h2. 这是二级标题&lt;/span&gt;&lt;small&gt;这是小标题&lt;/small&gt;&lt;/h2&gt;&#x000A;&lt;h3&gt;&lt;span&gt;h3. 这是三级标题&lt;/span&gt;&lt;small&gt;这是小标题&lt;/small&gt;&lt;/h3&gt;&#x000A;&lt;h4&gt;&lt;span&gt;h4. 这是四级标题&lt;/span&gt;&lt;small&gt;这是小标题&lt;/small&gt;&lt;/h4&gt;&#x000A;&lt;h5&gt;&lt;span&gt;h5. 这是五级标题&lt;/span&gt;&lt;small&gt;这是小标题&lt;/small&gt;&lt;/h5&gt;&#x000A;&lt;h6&gt;&lt;span&gt;h6. 这是六级标题&lt;/span&gt;&lt;small&gt;这是小标题&lt;/small&gt;&lt;/h6&gt;</code></pre>
     </div>
     <!-- %script{:type => 'text/javascript', :src => 'ui/lib/jquery-2.1.0.min.js'} -->
     <!-- %script{:type => 'text/javascript', :src => 'ui/ui.js'} -->

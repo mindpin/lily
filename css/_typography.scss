@@ -53,3 +53,13 @@ h6, .h6 {font-size: $font-size-h6;}
 p {
   margin:0 0 $line-height-in-px / 2;
 }
+
+
+// 列表
+ul, ol {
+  margin-top: 0;
+  margin-bottom: $line-height-in-px / 2;
+  ul, ol {
+    margin-bottom: 0;
+  }
+}

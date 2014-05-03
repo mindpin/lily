@@ -1,11 +1,14 @@
 .example-section
-  %h1 概述
+  %h1.header-title 概述
   %p.lead
-    Lily 目前用于和将用于 MINDPIN 团队的 web 产品的开发。它将以 git submodule 或者 封装到 Ruby Gem 中的形式引用到其他工程里。基于 Lily 进行开发，需要了解 SASS 和 CoffeeScript. 并且强烈建议了解 HAML.
+    Lily 目前用于和将用于 MINDPIN 团队的 web 产品的开发。<br/>
+    它将以 git submodule 或者 封装到 Ruby Gem 中的形式引用到其他工程里。<br/>
+    基于 Lily 进行开发，需要了解 SASS 和 CoffeeScript. 并且强烈建议了解 HAML.
 
   %h3 SASS, CoffeeScript 和 HAML
   %p
-    SASS 对应 CSS; CoffeeScript 对应 JavaScript; HAML 对应 HTML; 他们都是对原始语法的增强和扩充。在现代 web 开发技术中十分常用。
+    SASS 对应 CSS; CoffeeScript 对应 JavaScript; HAML 对应 HTML; <br/>
+    他们都是对原始语法的增强和扩充，在现代 web 开发技术中十分常用。
 
   %ul
     %li
@@ -19,7 +22,10 @@
       %a{:href => 'http://haml.info/', :target => '_blank'} http://haml.info/
 
   %h3 HTML5 顶部声明
-  %p Lily 以 HTML5 标准下的现代浏览器（Chrome / Firefox / IE9+ / Safari 等）为基准进行设计。并且，文字编码应为 UTF-8。强烈建议所有 web 页面代码应该以此代码作为顶部声明：
+  %p 
+    %span Lily 以 HTML5 标准下的现代浏览器（Chrome / Firefox / IE9+ / Safari 等）为基准进行设计。
+    %br
+    %span 并且，文字编码应为 UTF-8。强烈建议所有 web 页面代码应该以此代码作为顶部声明：
   .code-highlight
     %pre
       %code.html
@@ -53,7 +59,8 @@
     %code 
       :escaped
         <meta>
-    %span 声明。当允许手势缩放页面时，采用这样的声明：
+    %span 声明。<br/>
+    当允许手势缩放页面时，采用这样的声明：
   .code-highlight
     %pre
       %code.html
@@ -63,7 +70,9 @@
   %p
     %span 当声明中包含
     %code user-scalable=no
-    %span 时，手势缩放将被禁止。在某些场景下，需要 web 页面在移动设备上的体验更接近原生应用，此时就需要进行这样的声明：
+    %span 时，手势缩放将被禁止。
+    %br
+    %span 在某些场景下，需要 web 页面在移动设备上的体验更接近原生应用，此时就需要进行这样的声明：
   .code-highlight
     %pre
       %code.html
@@ -71,7 +80,9 @@
           :escaped
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   %p
-    %span 关于 viewport 特性，以及 Device Adaptation 可参考：
+    %span 关于 viewport 特性，以及 Device Adaptation
+    %br
+    %span 可参考：
     %a{:href => 'http://s.4ye.me/yNWDei', :target => '_blank'} http://s.4ye.me/yNWDei
     %br
     %span 以及参考：

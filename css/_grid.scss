@@ -1,0 +1,67 @@
+// _table.scss (网格结构)
+// =================
+// 实现网格结构布局
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+  @include container-fixed();
+
+  @media (min-width: $screen-pad-min) {
+    width: $container-pad;
+  }
+  @media (min-width: $screen-desk-min) {
+    width: $container-desk;
+  }
+  @media (min-width: $screen-wide-min) {
+    width: $container-wide;
+  }
+}
+
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid {
+  @include container-fixed;
+}
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row {
+  @include make-row();
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@include make-grid-columns();
+
+
+// 最小屏幕
+@include make-grid(phone);
+
+// 小屏幕
+@media (min-width: $screen-pad-min) {
+  @include make-grid(pad);
+}
+
+// 一般屏幕
+@media (min-width: $screen-desk-min) {
+  @include make-grid(desk);
+}
+
+// 宽屏
+@media (min-width: $screen-wide-min) {
+  @include make-grid(wide);
+}
