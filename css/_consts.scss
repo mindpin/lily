@@ -139,7 +139,8 @@ $text-quiet: $black-40 !default;
 // 以这些尺寸来区分不同的屏幕宽度
 
 // 最小的屏幕，智能手机
-$screen-phone-min:  480px !default; // 3.5 寸 android 手机屏款
+// $screen-phone-min:  480px !default; // 3.5 寸 android 手机屏款
+// 貌似没什么用
 
 // 大一些的屏幕，平板电脑
 $screen-pad-min:    768px !default; // IPAD2 屏宽

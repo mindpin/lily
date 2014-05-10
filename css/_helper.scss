@@ -13,3 +13,8 @@
 .readable-line {
   max-width: $readable-line-width;
 }
+
+// 标记为正在开发
+.-on-dev {
+  @include dev;
+}
