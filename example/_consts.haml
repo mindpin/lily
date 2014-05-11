@@ -27,19 +27,17 @@
       .color-const.black-80
       .color-const.black-90
   .code-highlight
-    %pre
-      %code.scss
-        = preserve do
-          :escaped
-            $black-10: darken(#fff, 10%) !default; // #e6e6e6
-            $black-20: darken(#fff, 20%) !default; // #cccccc
-            $black-30: darken(#fff, 30%) !default; // #b3b3b3
-            $black-40: darken(#fff, 40%) !default; // #999999
-            $black-50: darken(#fff, 50%) !default; // #808080
-            $black-60: darken(#fff, 60%) !default; // #666666
-            $black-70: darken(#fff, 70%) !default; // #4d4d4d
-            $black-80: darken(#fff, 80%) !default; // #333333
-            $black-90: darken(#fff, 90%) !default; // #191919
+    :coderay
+      #!sass
+      $black-10: darken(#fff, 10%) !default; // #e6e6e6
+      $black-20: darken(#fff, 20%) !default; // #cccccc
+      $black-30: darken(#fff, 30%) !default; // #b3b3b3
+      $black-40: darken(#fff, 40%) !default; // #999999
+      $black-50: darken(#fff, 50%) !default; // #808080
+      $black-60: darken(#fff, 60%) !default; // #666666
+      $black-70: darken(#fff, 70%) !default; // #4d4d4d
+      $black-80: darken(#fff, 80%) !default; // #333333
+      $black-90: darken(#fff, 90%) !default; // #191919
 
   %p 
     %span Lily 中提供了一些语义颜色常量，其中五个基础颜色常量名参照 Bootstrap, 但是颜色值有所差别，饱和度略高一些。另外还增补了若干颜色常量，如果有需要会添加更多进来。
@@ -60,35 +58,31 @@
       .color-const.area-dream
 
   .code-highlight
-    %pre
-      %code.scss
-        = preserve do
-          :escaped
-            $area-primary: #2A70E8 !default;
-            $area-success: #4CC85E !default;
-            $area-info:    #44B2F5 !default;
-            $area-warning: #FFCC3F !default;
-            $area-danger:  #F15837 !default;
+    :coderay
+      #!sass
+      $area-primary: #2A70E8 !default;
+      $area-success: #4CC85E !default;
+      $area-info:    #44B2F5 !default;
+      $area-warning: #FFCC3F !default;
+      $area-danger:  #F15837 !default;
 
-            $area-hot:     #FF4400 !default;
-            $area-night:   #2E333F !default;
-            $area-dawn:    #FFFBE3 !default;
-            $area-fresh:   #6FBC00 !default;
-            $area-forest:  #009800 !default;
-            $area-dream:   #6f5499 !default;
+      $area-hot:     #FF4400 !default;
+      $area-night:   #2E333F !default;
+      $area-dawn:    #FFFBE3 !default;
+      $area-fresh:   #6FBC00 !default;
+      $area-forest:  #009800 !default;
+      $area-dream:   #6f5499 !default;
 
   %p 这些颜色值常量可以用在其他工程的任何地方。以 SASS 变量的形式来引用。当然，从网页设计保持简洁明快的角度来说，一个网页用到的颜色趋于单一为好，所以这些颜色常量也只是给出一些可能的选择。
 
   .code-highlight
-    %pre
-      %code.scss
-        = preserve do
-          :escaped
-            a.follow {
-              background-color: $area-success;
-            }
+    :coderay
+      #!sass
+      a.follow {
+        background-color: $area-success;
+      }
 
-            $desc-bg-color: $area-dawn;
-            .desc {
-              background-color: $desc-bg-color;
-            }
+      $desc-bg-color: $area-dawn;
+      .desc {
+        background-color: $desc-bg-color;
+      }

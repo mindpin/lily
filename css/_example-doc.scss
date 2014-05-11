@@ -2,7 +2,33 @@
 // 这些央视通常不会用于其他项目
 
 body.lily-example-doc {
+  .doc-head {
+    background-color: $area-primary;
+    padding:60px 15px;
+    margin-bottom: 40px;
 
+    h1 {
+      font-family: $font-family-monospace;
+      font-size: 60px;
+      line-height: 1;
+      color:#fff;
+      margin-top:0;
+      margin-bottom:20px;
+    }
+
+    p {
+      font-size: 24px;
+      color: rgba(white, 0.8);
+      margin-left:40px;
+    }
+
+    @include -below(phone) {
+      h1 {font-size:40px;}
+      p {margin-left: 0;}
+    }
+  }
+
+  
   .example-section {
     margin-bottom: 60px;
     > h1 {
@@ -15,10 +41,15 @@ body.lily-example-doc {
     .color-consts {
       @include clearfix;
       .color-const {
-        @include square(80px);
-        float:left;
-        margin-right:10px;
-        margin-top:10px;
+        @include col(1/8 * 9/10, $offset: -1/8 * 1/10);
+        height:60px;
+        margin-bottom:10px;
+
+        @include -below(phone) {
+          @include col(1/4 * 7/8, $offset: -1/4 * 1/8);
+          height:40px;
+        }
+
         border-radius:$border-radius-default;
 
         &.black-10 {background-color: $black-10;}
@@ -48,10 +79,17 @@ body.lily-example-doc {
   }
 
   .example {
-    margin-bottom:15px;
     position:relative;
     padding:45px 15px 15px;
-    border: $border-color-default solid 1px;
+    border: solid 1px $border-color-default;
+    margin:0 0 15px;
+    background-color: #FFF;
+
+    @include -below(phone) {
+      margin:0 -15px 15px;
+      background-color:#fafafa;
+      border-width: 1px 0;
+    }
 
     &:before {
       content: "示例样式";
@@ -81,13 +119,30 @@ body.lily-example-doc {
     table tr:first-child td {
       border-top: 0 none;
     }
+
+    @include -below(phone) {
+      table {
+        background-color: #FFF;
+        td {padding:15px 8px;}
+      }
+    }
   }
 
   .code-highlight {
-    padding:9px 14px;
+    padding:10px 15px;
     border:solid 1px $border-color-default;
     background-color:#f8f8f9;
     margin-bottom:20px;
+
+    margin-left: 0;
+    margin-right: 0;
+    border-width: 1px;
+
+    @include -below(phone) {
+      margin-left: -15px;
+      margin-right: -15px;
+      border-width: 1px 0;
+    }
 
     pre {
       background-color: transparent;

@@ -20,3 +20,7 @@ ruby watch_index_haml.rb .
 ```
 ruby -run -e httpd . -p 4000
 ```
+
+### 依赖的 Gem
+
+fssm, haml, haml-coderay

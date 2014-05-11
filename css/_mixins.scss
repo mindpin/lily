@@ -29,10 +29,16 @@
 // CSS3 属性的多浏览器兼容
 // -----------
 // CSS3 中的一些属性在各浏览器由私有属性声明，为了简化编码，把它们都封装成了 mixin
+@mixin prefixer($name, $params) {
+  -webkit-#{$name}: $params;
+  -moz-#{$name}: $params;
+  -ms-#{$name}: $params;
+  -o-#{$name}: $params;
+  #{$name}: $params;
+}
+
 @mixin box-sizing($boxmodel) {
-  -webkit-box-sizing: $boxmodel;
-     -moz-box-sizing: $boxmodel;
-          box-sizing: $boxmodel;
+  @include prefixer(box-sizing, $boxmodel);
 }
 
 @mixin border-box {
@@ -43,6 +49,119 @@
 // _grid.scss
 // ----------
 
+// 根据 jeet.gs 的思想，重新设计并精简
+// -----------
+// 一些实用的 mixins
+// 可以方便地构建非十二列的自由网格
+
+// 指定设备以及更大的设备
+@mixin -above($media) {
+  @if $media == pad {
+    @media (min-width: $screen-pad-min) { @content }
+  }
+
+  @else if $media == desk {
+    @media (min-width: $screen-desk-min) { @content }
+  }
+
+  @else if $media == wide {
+    @media (min-width: $screen-wide-min) { @content }
+  }
+}
+
+// 指定设备以及更小的设备
+@mixin -below($media) {
+  @if $media == phone {
+    @media (max-width: $screen-phone-max) { @content }
+  }
+
+  @else if $media == pad {
+    @media (max-width: $screen-pad-max) { @content }
+  }
+
+  @else if $media == desk {
+    @media (max-width: $screen-desk-max) { @content }
+  }
+}
+
+// 所有网格网格的基本共通样式
+@mixin -col-base($gap) {
+  position: relative;
+  min-height: 1px;
+  padding-left: $gap / 2;
+  padding-right: $gap / 2;
+  // float: left;
+  @include border-box;
+}
+
+// 自由网格
+// $ratio 网格宽度（比例）
+// $offset 向右偏移量，影响其他元素
+// $shift 相对偏移量，不影响其他元素，取正值或负值
+// $cycle 此网格循环几次后自动换行
+// $uncycle 和 -below / -above 联用，用于消除上层 sass 定义中的 $cycle
+// $gap 网格间距（像素值）
+@mixin col($ratio: 1, $offset: 0, $shift: 0, $cycle: 0, $uncycle: 0, $gap: $grid-gap) {
+  @include -col-base($gap);
+  width: percentage($ratio);
+
+  @if $ratio < 1 {
+    float: left;
+  }
+
+  @if $offset > 0 {
+    margin-left: percentage($offset);
+  }
+
+  @if $offset < 0 {
+    margin-right: percentage(-$offset);
+  }
+
+  @if $shift != 0 {
+    @if $shift > 0 {
+      left: percentage($shift);
+    } @else {
+      right: percentage($shift);
+    }
+  }
+
+  @if $uncycle != 0 {
+    &:nth-child(#{$uncycle}n) {
+      float: left;
+      margin-right: 0;
+    }
+    &:nth-child(#{$uncycle}n + 1) {
+      clear: none;
+    }
+  }
+
+  @if $cycle != 0 {
+    &:nth-child(#{$cycle}n) {
+      float: right;
+      margin-right: percentage(1 - $ratio * $cycle)
+    }
+    &:nth-child(#{$cycle}n + 1) {
+      clear: both;
+    }
+  }
+}
+
+// 无间距的自由网格
+// $ratio 网格宽度（比例）
+@mixin span($ratio: 1, $offset: 0) {
+  @include col($ratio, $offset, $gap: 0);
+}
+
+// 开发者临时标记
+@mixin dev() {
+  background: rgba($on-dev-color, 0.05);
+  * { background: rgba($on-dev-color, 0.05); }
+}
+
+// bootstrap grid system
+// -------------
+
+// 外层容器
 @mixin container-fixed {
   margin-left:    auto;
   margin-right:   auto;
@@ -52,6 +171,9 @@
   @include border-box;
 }
 
+// 网格行
+// 主要用途是消除容器/上层网格的 padding
+// 便于嵌套
 @mixin make-row($gap: $grid-gap) {
   margin-left:  $gap / -2;
   margin-right: $gap / -2;
@@ -60,41 +182,49 @@
 }
 
 @mixin make-grid-columns {
-  $i: 1;
-  $list: ".col-phone-#{$i}, .col-pad-#{$i}, .col-desk-#{$i}, .col-wide-#{$i}";
-  @for $i from 2 through $grid-columns {
-    $list: "#{$list},
-    .col-phone-#{$i}, .col-pad-#{$i}, .col-desk-#{$i}, .col-wide-#{$i}"
+  $list: null;
+  @for $i from 1 through $grid-columns {
+    $s: ".col-phone-#{$i}, .col-pad-#{$i}, .col-desk-#{$i}, .col-wide-#{$i}";
+    $list: append($list, #{$s}, comma);
   }
   #{$list} {
-    position: relative;
-    min-height: 1px;
-    padding-left: $grid-gap / 2;
-    padding-right: $grid-gap / 2;
+    @include -col-base($grid-gap);
+  }
+}
+
+@mixin float-grid-columns($class) {
+  $list: null;
+  @for $i from 1 through $grid-columns {
+    $s: ".col-#{$class}-#{$i}";
+    $list: append($list, #{$s}, comma);
+  }
+  #{$list} {
     float: left;
-    @include border-box;
   }
 }
 
 @mixin make-grid($class) {
-  @include loop-grid-columns($grid-columns, $class, "width");
-  @include loop-grid-columns($grid-columns, $class, "left");
-  @include loop-grid-columns($grid-columns, $class, "right");
-  @include loop-grid-columns($grid-columns, $class, "margin-left");
+  // float: left 属性必须在 media query 符合条件时才生效，
+  // 否则会有宽度 100% 不能正确渲染的 bug
+  @include float-grid-columns($class);
+  @include loop-grid-columns($grid-columns, $class, width, width);
+  @include loop-grid-columns($grid-columns, $class, pull, left);
+  @include loop-grid-columns($grid-columns, $class, push, right);
+  @include loop-grid-columns($grid-columns, $class, offset, margin-left);
 }
 
-@mixin loop-grid-columns($columns, $class, $type) {
+@mixin loop-grid-columns($columns, $class, $type, $name) {
   @for $index from 1 through $columns {
     
-    @if $type == "width" {
+    @if $type == width {
       .col-#{$class}-#{$index} {
-        #{$type}: percentage($index / $columns);
+        #{$name}: percentage($index / $columns);
       }
     }
 
     @else {
       .col-#{$class}-#{$type}-#{$index} {
-        #{$type}: percentage($index / $columns);
+        #{$name}: percentage($index / $columns);
       }
     }
   }

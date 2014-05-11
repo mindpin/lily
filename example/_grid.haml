@@ -43,19 +43,18 @@
     %a{:href => "http://mediaqueri.es/"} http://mediaqueri.es/
   %p Lily 使用以下的 SASS 声明来实现弹性自适应：
   .code-highlight
-    %pre
-      %code.scss
-        = preserve do
-          :escaped
-            @media (min-width: $screen-pad-min) {
-              width: $container-pad;
-            }
-            @media (min-width: $screen-desk-min) {
-              width: $container-desk;
-            }
-            @media (min-width: $screen-wide-min) {
-              width: $container-wide;
-            }
+    :coderay
+      #!sass
+      @media (min-width: $screen-pad-min) {
+        width: $container-pad;
+      }
+      @media (min-width: $screen-desk-min) {
+        width: $container-desk;
+      }
+      @media (min-width: $screen-wide-min) {
+        width: $container-wide;
+      }
+
   %p 
     %span 其中，三个宽度等级的默认取值分别为：
     %code $screen-pad-min: 768px;
@@ -87,51 +86,52 @@
   %h3 默认的网格参数
   %p Lily 默认的网格参数和 Bootstrap 保持一致，这样可以兼容一些增强 Bootstrap 的设计方案和组件。
 
-  %table.table.table-bordered.table-striped
-    %thead
-      %tr
-        %th
-        %th 
-          %span 很小的屏幕
-          .small 手机 (<768px)
-        %th 
-          %span 较小屏幕
-          .small 平板电脑 (<992px)
-        %th 
-          %span 一般屏幕
-          .small 普通显示器 (<1200px)
-        %th 
-          %span 宽屏幕
-          .small 宽屏显示器 (>=1200px)
-    %tbody
-      %tr
-        %th 容器宽度
-        %td 100%
-        %td 750px
-        %td 970px
-        %td 1170px
-      %tr
-        %th 样式名
-        %td 
-          %code .col-phone-
-        %td 
-          %code .col-pad-
-        %td 
-          %code .col-desk-
-        %td 
-          %code .col-wide-
-      %tr
-        %th 网格列数
-        %td{:colspan => 4} 12
-      %tr
-        %th 每列宽度
-        %td 自动。全屏宽度减去间隔值再除以 12
-        %td (750 - 30) / 12 = 60px
-        %td (970 - 30) / 12 ~= 78px
-        %td (1170 - 30) / 12 = 95px
-      %tr
-        %th 间隔值(grid-gap)
-        %td{:colspan => 4} 30px
+  .table-responsive
+    %table.table.table-bordered.table-striped
+      %thead
+        %tr
+          %th
+          %th 
+            %span 很小的屏幕
+            .small 手机 (<768px)
+          %th 
+            %span 较小屏幕
+            .small 平板电脑 (<992px)
+          %th 
+            %span 一般屏幕
+            .small 普通显示器 (<1200px)
+          %th 
+            %span 宽屏幕
+            .small 宽屏显示器 (>=1200px)
+      %tbody
+        %tr
+          %th 容器宽度
+          %td 100%
+          %td 750px
+          %td 970px
+          %td 1170px
+        %tr
+          %th 样式名
+          %td 
+            %code .col-phone-
+          %td 
+            %code .col-pad-
+          %td 
+            %code .col-desk-
+          %td 
+            %code .col-wide-
+        %tr
+          %th 网格列数
+          %td{:colspan => 4} 12
+        %tr
+          %th 每列宽度
+          %td 自动。全屏宽度减去间隔值再除以 12
+          %td (750 - 30) / 12 = 60px
+          %td (970 - 30) / 12 ~= 78px
+          %td (1170 - 30) / 12 = 95px
+        %tr
+          %th 间隔值(grid-gap)
+          %td{:colspan => 4} 30px
 
   %p 
     %span 网格样式被设计为向上适应，如果用
