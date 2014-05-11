@@ -20,58 +20,57 @@
     %span 的样式名来把普通的 div, span 元素变为标题样式。
 
   .example.example-typography
-    %table.table
-      %tbody
-        %tr
-          %td
-            %h1 
-              %span h1. 这是一级标题
-              %small 这是小标题
-          %td
-            %span.info font-size ~ 36px
-        %tr
-          %td
-            %h2 
-              %span h2. 这是二级标题
-              %small 这是小标题
-          %td
-            %span.info font-size ~ 30px
-        %tr
-          %td
-            %h3 
-              %span h3. 这是三级标题
-              %small 这是小标题
-          %td
-            %span.info font-size ~ 24px
-        %tr
-          %td
-            %h4 
-              %span h4. 这是四级标题
-              %small 这是小标题
-          %td
-            %span.info font-size ~ 18px
-        %tr
-          %td
-            %h5 
-              %span h5. 这是五级标题
-              %small 这是小标题
-          %td
-            %span.info font-size ~ 16px
-        %tr
-          %td
-            %h6 
-              %span h6. 这是六级标题
-              %small 这是小标题
-          %td
-            %span.info font-size ~ 14px
+    .table-responsive
+      %table.table
+        %tbody
+          %tr
+            %td
+              %h1 
+                %span h1. 这是一级标题
+                %small 这是小标题
+            %td
+              %span.info font-size ~ 36px
+          %tr
+            %td
+              %h2 
+                %span h2. 这是二级标题
+                %small 这是小标题
+            %td
+              %span.info font-size ~ 30px
+          %tr
+            %td
+              %h3 
+                %span h3. 这是三级标题
+                %small 这是小标题
+            %td
+              %span.info font-size ~ 24px
+          %tr
+            %td
+              %h4 
+                %span h4. 这是四级标题
+                %small 这是小标题
+            %td
+              %span.info font-size ~ 18px
+          %tr
+            %td
+              %h5 
+                %span h5. 这是五级标题
+                %small 这是小标题
+            %td
+              %span.info font-size ~ 16px
+          %tr
+            %td
+              %h6 
+                %span h6. 这是六级标题
+                %small 这是小标题
+            %td
+              %span.info font-size ~ 14px
   .code-highlight
-    %pre
-      %code.html
-        = preserve do
-          :escaped
-            <h1><span>h1. 这是一级标题</span><small>这是小标题</small></h1>
-            <h2><span>h2. 这是二级标题</span><small>这是小标题</small></h2>
-            <h3><span>h3. 这是三级标题</span><small>这是小标题</small></h3>
-            <h4><span>h4. 这是四级标题</span><small>这是小标题</small></h4>
-            <h5><span>h5. 这是五级标题</span><small>这是小标题</small></h5>
-            <h6><span>h6. 这是六级标题</span><small>这是小标题</small></h6>
+    :coderay
+      #!html
+      <h1><span>h1. 这是一级标题</span><small>这是小标题</small></h1>
+      <h2><span>h2. 这是二级标题</span><small>这是小标题</small></h2>
+      <h3><span>h3. 这是三级标题</span><small>这是小标题</small></h3>
+      <h4><span>h4. 这是四级标题</span><small>这是小标题</small></h4>
+      <h5><span>h5. 这是五级标题</span><small>这是小标题</small></h5>
+      <h6><span>h6. 这是六级标题</span><small>这是小标题</small></h6>

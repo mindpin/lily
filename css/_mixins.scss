@@ -54,6 +54,7 @@
 // 一些实用的 mixins
 // 可以方便地构建非十二列的自由网格
 
+// 指定设备以及更大的设备
 @mixin -above($media) {
   @if $media == pad {
     @media (min-width: $screen-pad-min) { @content }
@@ -68,6 +69,7 @@
   }
 }
 
+// 指定设备以及更小的设备
 @mixin -below($media) {
   @if $media == phone {
     @media (max-width: $screen-phone-max) { @content }
@@ -88,7 +90,7 @@
   min-height: 1px;
   padding-left: $gap / 2;
   padding-right: $gap / 2;
-  float: left;
+  // float: left;
   @include border-box;
 }
 
@@ -103,8 +105,16 @@
   @include -col-base($gap);
   width: percentage($ratio);
 
+  @if $ratio < 1 {
+    float: left;
+  }
+
   @if $offset > 0 {
     margin-left: percentage($offset);
+  }
+
+  @if $offset < 0 {
+    margin-right: percentage(-$offset);
   }
 
   @if $shift != 0 {
@@ -144,10 +154,8 @@
 
 // 开发者临时标记
 @mixin dev() {
-  background: rgba(red, 0.05);
-  * {
-    background: rgba(red, 0.05);
-  }
+  background: rgba($on-dev-color, 0.05);
+  * { background: rgba($on-dev-color, 0.05); }
 }
 
 // bootstrap grid system
@@ -179,13 +187,26 @@
     $s: ".col-phone-#{$i}, .col-pad-#{$i}, .col-desk-#{$i}, .col-wide-#{$i}";
     $list: append($list, #{$s}, comma);
   }
-
   #{$list} {
     @include -col-base($grid-gap);
   }
 }
 
+@mixin float-grid-columns($class) {
+  $list: null;
+  @for $i from 1 through $grid-columns {
+    $s: ".col-#{$class}-#{$i}";
+    $list: append($list, #{$s}, comma);
+  }
+  #{$list} {
+    float: left;
+  }
+}
+
 @mixin make-grid($class) {
+  // float: left 属性必须在 media query 符合条件时才生效，
+  // 否则会有宽度 100% 不能正确渲染的 bug
+  @include float-grid-columns($class);
   @include loop-grid-columns($grid-columns, $class, width, width);
   @include loop-grid-columns($grid-columns, $class, pull, left);
   @include loop-grid-columns($grid-columns, $class, push, right);
