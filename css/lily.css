@@ -952,25 +952,37 @@ pre {
   .col-wide-offset-12 {
     margin-left: 100%; } }
 body.lily-example-doc .doc-head {
-  background-color: #2a70e8;
-  padding: 60px 15px;
+  background-color: #4CBE98;
+  padding: 50px 15px;
   margin-bottom: 40px; }
+  body.lily-example-doc .doc-head .lily-logo {
+    height: 150px;
+    width: 150px;
+    background: url("../imgs/lily.png") no-repeat; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      body.lily-example-doc .doc-head .lily-logo {
+        background: url("../imgs/lily@2x.png") no-repeat;
+        background-size: 150px 150px; } }
   body.lily-example-doc .doc-head h1 {
     font-family: "Menlo", "Monaco", "Consolas", "Courier New", "monospace", "微软雅黑";
     font-size: 60px;
     line-height: 1;
     color: #fff;
-    margin-top: 0;
+    margin-top: 15px;
     margin-bottom: 20px; }
   body.lily-example-doc .doc-head p {
     font-size: 24px;
     color: rgba(255, 255, 255, 0.8);
     margin-left: 40px; }
   @media (max-width: 767px) {
-    body.lily-example-doc .doc-head h1 {
-      font-size: 40px; }
-    body.lily-example-doc .doc-head p {
-      margin-left: 0; } }
+    body.lily-example-doc .doc-head {
+      padding: 30px 15px; }
+      body.lily-example-doc .doc-head .lily-logo {
+        margin: 0 auto; }
+      body.lily-example-doc .doc-head h1 {
+        font-size: 40px; }
+      body.lily-example-doc .doc-head p {
+        margin-left: 0; } }
 body.lily-example-doc .example-section {
   margin-bottom: 60px; }
   body.lily-example-doc .example-section > h1 {

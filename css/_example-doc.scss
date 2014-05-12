@@ -3,16 +3,21 @@
 
 body.lily-example-doc {
   .doc-head {
-    background-color: $area-primary;
-    padding:60px 15px;
+    background-color: #4CBE98;
+    padding:50px 15px;
     margin-bottom: 40px;
+
+    .lily-logo {
+      height:150px;width:150px;
+      @include retina-bg-img("../imgs/lily.png", "../imgs/lily@2x.png", 150px, 150px);
+    }
 
     h1 {
       font-family: $font-family-monospace;
       font-size: 60px;
       line-height: 1;
       color:#fff;
-      margin-top:0;
+      margin-top:15px;
       margin-bottom:20px;
     }
 
@@ -23,6 +28,12 @@ body.lily-example-doc {
     }
 
     @include -below(phone) {
+      padding:30px 15px;
+
+      .lily-logo {
+        margin:0 auto;
+      }
+
       h1 {font-size:40px;}
       p {margin-left: 0;}
     }
