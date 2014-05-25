@@ -1735,162 +1735,6 @@ a.btn, button.btn, input[type=submit].btn {
       -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
       -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
       box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-flat-primary, button.btn.btn-flat-primary, input[type=submit].btn.btn-flat-primary {
-    background-color: #2a70e8;
-    color: white;
-    border: 0 none; }
-    a.btn.btn-flat-primary:hover, button.btn.btn-flat-primary:hover, input[type=submit].btn.btn-flat-primary:hover {
-      background-color: #4683eb; }
-    a.btn.btn-flat-primary:active, button.btn.btn-flat-primary:active, input[type=submit].btn.btn-flat-primary:active {
-      background-color: #1964e5;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-flat-success, button.btn.btn-flat-success, input[type=submit].btn.btn-flat-success {
-    background-color: #4cc85e;
-    color: white;
-    border: 0 none; }
-    a.btn.btn-flat-success:hover, button.btn.btn-flat-success:hover, input[type=submit].btn.btn-flat-success:hover {
-      background-color: #63cf73; }
-    a.btn.btn-flat-success:active, button.btn.btn-flat-success:active, input[type=submit].btn.btn-flat-success:active {
-      background-color: #3cc350;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-flat-info, button.btn.btn-flat-info, input[type=submit].btn.btn-flat-info {
-    background-color: #44b2f5;
-    color: white;
-    border: 0 none; }
-    a.btn.btn-flat-info:hover, button.btn.btn-flat-info:hover, input[type=submit].btn.btn-flat-info:hover {
-      background-color: #61bef7; }
-    a.btn.btn-flat-info:active, button.btn.btn-flat-info:active, input[type=submit].btn.btn-flat-info:active {
-      background-color: #31aaf4;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-flat-warning, button.btn.btn-flat-warning, input[type=submit].btn.btn-flat-warning {
-    background-color: #ffcc3f;
-    color: white;
-    border: 0 none; }
-    a.btn.btn-flat-warning:hover, button.btn.btn-flat-warning:hover, input[type=submit].btn.btn-flat-warning:hover {
-      background-color: #ffd45e; }
-    a.btn.btn-flat-warning:active, button.btn.btn-flat-warning:active, input[type=submit].btn.btn-flat-warning:active {
-      background-color: #ffc72b;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-flat-danger, button.btn.btn-flat-danger, input[type=submit].btn.btn-flat-danger {
-    background-color: #e54028;
-    color: white;
-    border: 0 none; }
-    a.btn.btn-flat-danger:hover, button.btn.btn-flat-danger:hover, input[type=submit].btn.btn-flat-danger:hover {
-      background-color: #e85843; }
-    a.btn.btn-flat-danger:active, button.btn.btn-flat-danger:active, input[type=submit].btn.btn-flat-danger:active {
-      background-color: #de341b;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-flat-hot, button.btn.btn-flat-hot, input[type=submit].btn.btn-flat-hot {
-    background-color: #ff4400;
-    color: white;
-    border: 0 none; }
-    a.btn.btn-flat-hot:hover, button.btn.btn-flat-hot:hover, input[type=submit].btn.btn-flat-hot:hover {
-      background-color: #ff5a1f; }
-    a.btn.btn-flat-hot:active, button.btn.btn-flat-hot:active, input[type=submit].btn.btn-flat-hot:active {
-      background-color: #eb3f00;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-flat-night, button.btn.btn-flat-night, input[type=submit].btn.btn-flat-night {
-    background-color: #2e333f;
-    color: white;
-    border: 0 none; }
-    a.btn.btn-flat-night:hover, button.btn.btn-flat-night:hover, input[type=submit].btn.btn-flat-night:hover {
-      background-color: #3b4151; }
-    a.btn.btn-flat-night:active, button.btn.btn-flat-night:active, input[type=submit].btn.btn-flat-night:active {
-      background-color: #252933;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-flat-dawn, button.btn.btn-flat-dawn, input[type=submit].btn.btn-flat-dawn {
-    background-color: #fffbe3;
-    color: white;
-    border: 0 none; }
-    a.btn.btn-flat-dawn:hover, button.btn.btn-flat-dawn:hover, input[type=submit].btn.btn-flat-dawn:hover {
-      background-color: white; }
-    a.btn.btn-flat-dawn:active, button.btn.btn-flat-dawn:active, input[type=submit].btn.btn-flat-dawn:active {
-      background-color: #fff8cf;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-flat-fresh, button.btn.btn-flat-fresh, input[type=submit].btn.btn-flat-fresh {
-    background-color: #7db500;
-    color: white;
-    border: 0 none; }
-    a.btn.btn-flat-fresh:hover, button.btn.btn-flat-fresh:hover, input[type=submit].btn.btn-flat-fresh:hover {
-      background-color: #92d400; }
-    a.btn.btn-flat-fresh:active, button.btn.btn-flat-fresh:active, input[type=submit].btn.btn-flat-fresh:active {
-      background-color: #6fa100;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-flat-forest, button.btn.btn-flat-forest, input[type=submit].btn.btn-flat-forest {
-    background-color: #009800;
-    color: white;
-    border: 0 none; }
-    a.btn.btn-flat-forest:hover, button.btn.btn-flat-forest:hover, input[type=submit].btn.btn-flat-forest:hover {
-      background-color: #00b700; }
-    a.btn.btn-flat-forest:active, button.btn.btn-flat-forest:active, input[type=submit].btn.btn-flat-forest:active {
-      background-color: #008400;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-flat-dream, button.btn.btn-flat-dream, input[type=submit].btn.btn-flat-dream {
-    background-color: #87318c;
-    color: white;
-    border: 0 none; }
-    a.btn.btn-flat-dream:hover, button.btn.btn-flat-dream:hover, input[type=submit].btn.btn-flat-dream:hover {
-      background-color: #9d39a3; }
-    a.btn.btn-flat-dream:active, button.btn.btn-flat-dream:active, input[type=submit].btn.btn-flat-dream:active {
-      background-color: #782c7d;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-flat-caution, button.btn.btn-flat-caution, input[type=submit].btn.btn-flat-caution {
-    background-color: #f18d05;
-    color: white;
-    border: 0 none; }
-    a.btn.btn-flat-caution:hover, button.btn.btn-flat-caution:hover, input[type=submit].btn.btn-flat-caution:hover {
-      background-color: #fa9b1a; }
-    a.btn.btn-flat-caution:active, button.btn.btn-flat-caution:active, input[type=submit].btn.btn-flat-caution:active {
-      background-color: #dd8105;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
   a.btn.btn-solid, button.btn.btn-solid, input[type=submit].btn.btn-solid {
     background: -webkit-linear-gradient(top, #f2f2f2, #d9d9d9);
     background: -moz-linear-gradient(top, #f2f2f2, #d9d9d9);
@@ -1943,6 +1787,34 @@ a.btn, button.btn, input[type=submit].btn {
       line-height: 20px; }
       a.btn.btn-solid.btn-mini.btn-circle, button.btn.btn-solid.btn-mini.btn-circle, input[type=submit].btn.btn-solid.btn-mini.btn-circle {
         line-height: 74.5px; }
+  a.btn.btn-bdb, button.btn.btn-bdb, input[type=submit].btn.btn-bdb {
+    border-bottom: solid 2px #cccccc;
+    background-color: #e6e6e6;
+    color: #666666; }
+    a.btn.btn-bdb:hover, button.btn.btn-bdb:hover, input[type=submit].btn.btn-bdb:hover {
+      background-color: whitesmoke;
+      border-bottom-color: #dbdbdb; }
+    a.btn.btn-bdb:active, button.btn.btn-bdb:active, input[type=submit].btn.btn-bdb:active {
+      background-color: #dbdbdb;
+      border-bottom-width: 0;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
+  a.btn.btn-flat-primary, button.btn.btn-flat-primary, input[type=submit].btn.btn-flat-primary {
+    background-color: #2a70e8;
+    color: white;
+    border: 0 none; }
+    a.btn.btn-flat-primary:hover, button.btn.btn-flat-primary:hover, input[type=submit].btn.btn-flat-primary:hover {
+      background-color: #4683eb; }
+    a.btn.btn-flat-primary:active, button.btn.btn-flat-primary:active, input[type=submit].btn.btn-flat-primary:active {
+      background-color: #1964e5;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
   a.btn.btn-solid-primary, button.btn.btn-solid-primary, input[type=submit].btn.btn-solid-primary {
     background: -webkit-linear-gradient(top, #417fea, #1862e0);
     background: -moz-linear-gradient(top, #417fea, #1862e0);
@@ -2000,6 +1872,34 @@ a.btn, button.btn, input[type=submit].btn {
       line-height: 20px; }
       a.btn.btn-solid-primary.btn-mini.btn-circle, button.btn.btn-solid-primary.btn-mini.btn-circle, input[type=submit].btn.btn-solid-primary.btn-mini.btn-circle {
         line-height: 74.5px; }
+  a.btn.btn-bdb-primary, button.btn.btn-bdb-primary, input[type=submit].btn.btn-bdb-primary {
+    border-bottom: solid 2px #1658c9;
+    background-color: #2a70e8;
+    color: white; }
+    a.btn.btn-bdb-primary:hover, button.btn.btn-bdb-primary:hover, input[type=submit].btn.btn-bdb-primary:hover {
+      background-color: #4683eb;
+      border-bottom-color: #1964e5; }
+    a.btn.btn-bdb-primary:active, button.btn.btn-bdb-primary:active, input[type=submit].btn.btn-bdb-primary:active {
+      background-color: #1964e5;
+      border-bottom-width: 0;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
+  a.btn.btn-flat-success, button.btn.btn-flat-success, input[type=submit].btn.btn-flat-success {
+    background-color: #4cc85e;
+    color: white;
+    border: 0 none; }
+    a.btn.btn-flat-success:hover, button.btn.btn-flat-success:hover, input[type=submit].btn.btn-flat-success:hover {
+      background-color: #63cf73; }
+    a.btn.btn-flat-success:active, button.btn.btn-flat-success:active, input[type=submit].btn.btn-flat-success:active {
+      background-color: #3cc350;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
   a.btn.btn-solid-success, button.btn.btn-solid-success, input[type=submit].btn.btn-solid-success {
     background: -webkit-linear-gradient(top, #60ce70, #3bc04e);
     background: -moz-linear-gradient(top, #60ce70, #3bc04e);
@@ -2057,6 +1957,34 @@ a.btn, button.btn, input[type=submit].btn {
       line-height: 20px; }
       a.btn.btn-solid-success.btn-mini.btn-circle, button.btn.btn-solid-success.btn-mini.btn-circle, input[type=submit].btn.btn-solid-success.btn-mini.btn-circle {
         line-height: 74.5px; }
+  a.btn.btn-bdb-success, button.btn.btn-bdb-success, input[type=submit].btn.btn-bdb-success {
+    border-bottom: solid 2px #35ac46;
+    background-color: #4cc85e;
+    color: white; }
+    a.btn.btn-bdb-success:hover, button.btn.btn-bdb-success:hover, input[type=submit].btn.btn-bdb-success:hover {
+      background-color: #63cf73;
+      border-bottom-color: #3cc350; }
+    a.btn.btn-bdb-success:active, button.btn.btn-bdb-success:active, input[type=submit].btn.btn-bdb-success:active {
+      background-color: #3cc350;
+      border-bottom-width: 0;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
+  a.btn.btn-flat-info, button.btn.btn-flat-info, input[type=submit].btn.btn-flat-info {
+    background-color: #44b2f5;
+    color: white;
+    border: 0 none; }
+    a.btn.btn-flat-info:hover, button.btn.btn-flat-info:hover, input[type=submit].btn.btn-flat-info:hover {
+      background-color: #61bef7; }
+    a.btn.btn-flat-info:active, button.btn.btn-flat-info:active, input[type=submit].btn.btn-flat-info:active {
+      background-color: #31aaf4;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
   a.btn.btn-solid-info, button.btn.btn-solid-info, input[type=submit].btn.btn-solid-info {
     background: -webkit-linear-gradient(top, #5cbcf6, #2ca8f4);
     background: -moz-linear-gradient(top, #5cbcf6, #2ca8f4);
@@ -2114,6 +2042,34 @@ a.btn, button.btn, input[type=submit].btn {
       line-height: 20px; }
       a.btn.btn-solid-info.btn-mini.btn-circle, button.btn.btn-solid-info.btn-mini.btn-circle, input[type=submit].btn.btn-solid-info.btn-mini.btn-circle {
         line-height: 74.5px; }
+  a.btn.btn-bdb-info, button.btn.btn-bdb-info, input[type=submit].btn.btn-bdb-info {
+    border-bottom: solid 2px #149ef2;
+    background-color: #44b2f5;
+    color: white; }
+    a.btn.btn-bdb-info:hover, button.btn.btn-bdb-info:hover, input[type=submit].btn.btn-bdb-info:hover {
+      background-color: #61bef7;
+      border-bottom-color: #31aaf4; }
+    a.btn.btn-bdb-info:active, button.btn.btn-bdb-info:active, input[type=submit].btn.btn-bdb-info:active {
+      background-color: #31aaf4;
+      border-bottom-width: 0;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
+  a.btn.btn-flat-warning, button.btn.btn-flat-warning, input[type=submit].btn.btn-flat-warning {
+    background-color: #ffcc3f;
+    color: white;
+    border: 0 none; }
+    a.btn.btn-flat-warning:hover, button.btn.btn-flat-warning:hover, input[type=submit].btn.btn-flat-warning:hover {
+      background-color: #ffd45e; }
+    a.btn.btn-flat-warning:active, button.btn.btn-flat-warning:active, input[type=submit].btn.btn-flat-warning:active {
+      background-color: #ffc72b;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
   a.btn.btn-solid-warning, button.btn.btn-solid-warning, input[type=submit].btn.btn-solid-warning {
     background: -webkit-linear-gradient(top, #ffd359, #ffc525);
     background: -moz-linear-gradient(top, #ffd359, #ffc525);
@@ -2171,6 +2127,34 @@ a.btn, button.btn, input[type=submit].btn {
       line-height: 20px; }
       a.btn.btn-solid-warning.btn-mini.btn-circle, button.btn.btn-solid-warning.btn-mini.btn-circle, input[type=submit].btn.btn-solid-warning.btn-mini.btn-circle {
         line-height: 74.5px; }
+  a.btn.btn-bdb-warning, button.btn.btn-bdb-warning, input[type=submit].btn.btn-bdb-warning {
+    border-bottom: solid 2px #ffbe0c;
+    background-color: #ffcc3f;
+    color: white; }
+    a.btn.btn-bdb-warning:hover, button.btn.btn-bdb-warning:hover, input[type=submit].btn.btn-bdb-warning:hover {
+      background-color: #ffd45e;
+      border-bottom-color: #ffc72b; }
+    a.btn.btn-bdb-warning:active, button.btn.btn-bdb-warning:active, input[type=submit].btn.btn-bdb-warning:active {
+      background-color: #ffc72b;
+      border-bottom-width: 0;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
+  a.btn.btn-flat-danger, button.btn.btn-flat-danger, input[type=submit].btn.btn-flat-danger {
+    background-color: #e54028;
+    color: white;
+    border: 0 none; }
+    a.btn.btn-flat-danger:hover, button.btn.btn-flat-danger:hover, input[type=submit].btn.btn-flat-danger:hover {
+      background-color: #e85843; }
+    a.btn.btn-flat-danger:active, button.btn.btn-flat-danger:active, input[type=submit].btn.btn-flat-danger:active {
+      background-color: #de341b;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
   a.btn.btn-solid-danger, button.btn.btn-solid-danger, input[type=submit].btn.btn-solid-danger {
     background: -webkit-linear-gradient(top, #e8543f, #d9331a);
     background: -moz-linear-gradient(top, #e8543f, #d9331a);
@@ -2228,6 +2212,34 @@ a.btn, button.btn, input[type=submit].btn {
       line-height: 20px; }
       a.btn.btn-solid-danger.btn-mini.btn-circle, button.btn.btn-solid-danger.btn-mini.btn-circle, input[type=submit].btn.btn-solid-danger.btn-mini.btn-circle {
         line-height: 74.5px; }
+  a.btn.btn-bdb-danger, button.btn.btn-bdb-danger, input[type=submit].btn.btn-bdb-danger {
+    border-bottom: solid 2px #c22d18;
+    background-color: #e54028;
+    color: white; }
+    a.btn.btn-bdb-danger:hover, button.btn.btn-bdb-danger:hover, input[type=submit].btn.btn-bdb-danger:hover {
+      background-color: #e85843;
+      border-bottom-color: #de341b; }
+    a.btn.btn-bdb-danger:active, button.btn.btn-bdb-danger:active, input[type=submit].btn.btn-bdb-danger:active {
+      background-color: #de341b;
+      border-bottom-width: 0;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
+  a.btn.btn-flat-hot, button.btn.btn-flat-hot, input[type=submit].btn.btn-flat-hot {
+    background-color: #ff4400;
+    color: white;
+    border: 0 none; }
+    a.btn.btn-flat-hot:hover, button.btn.btn-flat-hot:hover, input[type=submit].btn.btn-flat-hot:hover {
+      background-color: #ff5a1f; }
+    a.btn.btn-flat-hot:active, button.btn.btn-flat-hot:active, input[type=submit].btn.btn-flat-hot:active {
+      background-color: #eb3f00;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
   a.btn.btn-solid-hot, button.btn.btn-solid-hot, input[type=submit].btn.btn-solid-hot {
     background: -webkit-linear-gradient(top, #ff571a, #e63d00);
     background: -moz-linear-gradient(top, #ff571a, #e63d00);
@@ -2285,6 +2297,34 @@ a.btn, button.btn, input[type=submit].btn {
       line-height: 20px; }
       a.btn.btn-solid-hot.btn-mini.btn-circle, button.btn.btn-solid-hot.btn-mini.btn-circle, input[type=submit].btn.btn-solid-hot.btn-mini.btn-circle {
         line-height: 74.5px; }
+  a.btn.btn-bdb-hot, button.btn.btn-bdb-hot, input[type=submit].btn.btn-bdb-hot {
+    border-bottom: solid 2px #cc3600;
+    background-color: #ff4400;
+    color: white; }
+    a.btn.btn-bdb-hot:hover, button.btn.btn-bdb-hot:hover, input[type=submit].btn.btn-bdb-hot:hover {
+      background-color: #ff5a1f;
+      border-bottom-color: #eb3f00; }
+    a.btn.btn-bdb-hot:active, button.btn.btn-bdb-hot:active, input[type=submit].btn.btn-bdb-hot:active {
+      background-color: #eb3f00;
+      border-bottom-width: 0;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
+  a.btn.btn-flat-night, button.btn.btn-flat-night, input[type=submit].btn.btn-flat-night {
+    background-color: #2e333f;
+    color: white;
+    border: 0 none; }
+    a.btn.btn-flat-night:hover, button.btn.btn-flat-night:hover, input[type=submit].btn.btn-flat-night:hover {
+      background-color: #3b4151; }
+    a.btn.btn-flat-night:active, button.btn.btn-flat-night:active, input[type=submit].btn.btn-flat-night:active {
+      background-color: #252933;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
   a.btn.btn-solid-night, button.btn.btn-solid-night, input[type=submit].btn.btn-solid-night {
     background: -webkit-linear-gradient(top, #393f4e, #232730);
     background: -moz-linear-gradient(top, #393f4e, #232730);
@@ -2342,6 +2382,34 @@ a.btn, button.btn, input[type=submit].btn {
       line-height: 20px; }
       a.btn.btn-solid-night.btn-mini.btn-circle, button.btn.btn-solid-night.btn-mini.btn-circle, input[type=submit].btn.btn-solid-night.btn-mini.btn-circle {
         line-height: 74.5px; }
+  a.btn.btn-bdb-night, button.btn.btn-bdb-night, input[type=submit].btn.btn-bdb-night {
+    border-bottom: solid 2px #181b22;
+    background-color: #2e333f;
+    color: white; }
+    a.btn.btn-bdb-night:hover, button.btn.btn-bdb-night:hover, input[type=submit].btn.btn-bdb-night:hover {
+      background-color: #3b4151;
+      border-bottom-color: #252933; }
+    a.btn.btn-bdb-night:active, button.btn.btn-bdb-night:active, input[type=submit].btn.btn-bdb-night:active {
+      background-color: #252933;
+      border-bottom-width: 0;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
+  a.btn.btn-flat-dawn, button.btn.btn-flat-dawn, input[type=submit].btn.btn-flat-dawn {
+    background-color: #fffbe3;
+    color: white;
+    border: 0 none; }
+    a.btn.btn-flat-dawn:hover, button.btn.btn-flat-dawn:hover, input[type=submit].btn.btn-flat-dawn:hover {
+      background-color: white; }
+    a.btn.btn-flat-dawn:active, button.btn.btn-flat-dawn:active, input[type=submit].btn.btn-flat-dawn:active {
+      background-color: #fff8cf;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
   a.btn.btn-solid-dawn, button.btn.btn-solid-dawn, input[type=submit].btn.btn-solid-dawn {
     background: -webkit-linear-gradient(top, #fffffc, #fff7c9);
     background: -moz-linear-gradient(top, #fffffc, #fff7c9);
@@ -2399,6 +2467,34 @@ a.btn, button.btn, input[type=submit].btn {
       line-height: 20px; }
       a.btn.btn-solid-dawn.btn-mini.btn-circle, button.btn.btn-solid-dawn.btn-mini.btn-circle, input[type=submit].btn.btn-solid-dawn.btn-mini.btn-circle {
         line-height: 74.5px; }
+  a.btn.btn-bdb-dawn, button.btn.btn-bdb-dawn, input[type=submit].btn.btn-bdb-dawn {
+    border-bottom: solid 2px #fff4b0;
+    background-color: #fffbe3;
+    color: white; }
+    a.btn.btn-bdb-dawn:hover, button.btn.btn-bdb-dawn:hover, input[type=submit].btn.btn-bdb-dawn:hover {
+      background-color: white;
+      border-bottom-color: #fff8cc; }
+    a.btn.btn-bdb-dawn:active, button.btn.btn-bdb-dawn:active, input[type=submit].btn.btn-bdb-dawn:active {
+      background-color: #fff8cf;
+      border-bottom-width: 0;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
+  a.btn.btn-flat-fresh, button.btn.btn-flat-fresh, input[type=submit].btn.btn-flat-fresh {
+    background-color: #7db500;
+    color: white;
+    border: 0 none; }
+    a.btn.btn-flat-fresh:hover, button.btn.btn-flat-fresh:hover, input[type=submit].btn.btn-flat-fresh:hover {
+      background-color: #92d400; }
+    a.btn.btn-flat-fresh:active, button.btn.btn-flat-fresh:active, input[type=submit].btn.btn-flat-fresh:active {
+      background-color: #6fa100;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
   a.btn.btn-solid-fresh, button.btn.btn-solid-fresh, input[type=submit].btn.btn-solid-fresh {
     background: -webkit-linear-gradient(top, #8fcf00, #6b9c00);
     background: -moz-linear-gradient(top, #8fcf00, #6b9c00);
@@ -2456,6 +2552,34 @@ a.btn, button.btn, input[type=submit].btn {
       line-height: 20px; }
       a.btn.btn-solid-fresh.btn-mini.btn-circle, button.btn.btn-solid-fresh.btn-mini.btn-circle, input[type=submit].btn.btn-solid-fresh.btn-mini.btn-circle {
         line-height: 74.5px; }
+  a.btn.btn-bdb-fresh, button.btn.btn-bdb-fresh, input[type=submit].btn.btn-bdb-fresh {
+    border-bottom: solid 2px #5a8200;
+    background-color: #7db500;
+    color: white; }
+    a.btn.btn-bdb-fresh:hover, button.btn.btn-bdb-fresh:hover, input[type=submit].btn.btn-bdb-fresh:hover {
+      background-color: #92d400;
+      border-bottom-color: #6fa100; }
+    a.btn.btn-bdb-fresh:active, button.btn.btn-bdb-fresh:active, input[type=submit].btn.btn-bdb-fresh:active {
+      background-color: #6fa100;
+      border-bottom-width: 0;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
+  a.btn.btn-flat-forest, button.btn.btn-flat-forest, input[type=submit].btn.btn-flat-forest {
+    background-color: #009800;
+    color: white;
+    border: 0 none; }
+    a.btn.btn-flat-forest:hover, button.btn.btn-flat-forest:hover, input[type=submit].btn.btn-flat-forest:hover {
+      background-color: #00b700; }
+    a.btn.btn-flat-forest:active, button.btn.btn-flat-forest:active, input[type=submit].btn.btn-flat-forest:active {
+      background-color: #008400;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
   a.btn.btn-solid-forest, button.btn.btn-solid-forest, input[type=submit].btn.btn-solid-forest {
     background: -webkit-linear-gradient(top, #00b200, #007f00);
     background: -moz-linear-gradient(top, #00b200, #007f00);
@@ -2513,6 +2637,34 @@ a.btn, button.btn, input[type=submit].btn {
       line-height: 20px; }
       a.btn.btn-solid-forest.btn-mini.btn-circle, button.btn.btn-solid-forest.btn-mini.btn-circle, input[type=submit].btn.btn-solid-forest.btn-mini.btn-circle {
         line-height: 74.5px; }
+  a.btn.btn-bdb-forest, button.btn.btn-bdb-forest, input[type=submit].btn.btn-bdb-forest {
+    border-bottom: solid 2px #006500;
+    background-color: #009800;
+    color: white; }
+    a.btn.btn-bdb-forest:hover, button.btn.btn-bdb-forest:hover, input[type=submit].btn.btn-bdb-forest:hover {
+      background-color: #00b700;
+      border-bottom-color: #008400; }
+    a.btn.btn-bdb-forest:active, button.btn.btn-bdb-forest:active, input[type=submit].btn.btn-bdb-forest:active {
+      background-color: #008400;
+      border-bottom-width: 0;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
+  a.btn.btn-flat-dream, button.btn.btn-flat-dream, input[type=submit].btn.btn-flat-dream {
+    background-color: #87318c;
+    color: white;
+    border: 0 none; }
+    a.btn.btn-flat-dream:hover, button.btn.btn-flat-dream:hover, input[type=submit].btn.btn-flat-dream:hover {
+      background-color: #9d39a3; }
+    a.btn.btn-flat-dream:active, button.btn.btn-flat-dream:active, input[type=submit].btn.btn-flat-dream:active {
+      background-color: #782c7d;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
   a.btn.btn-solid-dream, button.btn.btn-solid-dream, input[type=submit].btn.btn-solid-dream {
     background: -webkit-linear-gradient(top, #99389f, #752a79);
     background: -moz-linear-gradient(top, #99389f, #752a79);
@@ -2570,6 +2722,34 @@ a.btn, button.btn, input[type=submit].btn {
       line-height: 20px; }
       a.btn.btn-solid-dream.btn-mini.btn-circle, button.btn.btn-solid-dream.btn-mini.btn-circle, input[type=submit].btn.btn-solid-dream.btn-mini.btn-circle {
         line-height: 74.5px; }
+  a.btn.btn-bdb-dream, button.btn.btn-bdb-dream, input[type=submit].btn.btn-bdb-dream {
+    border-bottom: solid 2px #632466;
+    background-color: #87318c;
+    color: white; }
+    a.btn.btn-bdb-dream:hover, button.btn.btn-bdb-dream:hover, input[type=submit].btn.btn-bdb-dream:hover {
+      background-color: #9d39a3;
+      border-bottom-color: #782c7d; }
+    a.btn.btn-bdb-dream:active, button.btn.btn-bdb-dream:active, input[type=submit].btn.btn-bdb-dream:active {
+      background-color: #782c7d;
+      border-bottom-width: 0;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
+  a.btn.btn-flat-caution, button.btn.btn-flat-caution, input[type=submit].btn.btn-flat-caution {
+    background-color: #f18d05;
+    color: white;
+    border: 0 none; }
+    a.btn.btn-flat-caution:hover, button.btn.btn-flat-caution:hover, input[type=submit].btn.btn-flat-caution:hover {
+      background-color: #fa9b1a; }
+    a.btn.btn-flat-caution:active, button.btn.btn-flat-caution:active, input[type=submit].btn.btn-flat-caution:active {
+      background-color: #dd8105;
+      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
   a.btn.btn-solid-caution, button.btn.btn-solid-caution, input[type=submit].btn.btn-solid-caution {
     background: -webkit-linear-gradient(top, #fa9915, #d87e04);
     background: -moz-linear-gradient(top, #fa9915, #d87e04);
@@ -2627,186 +2807,6 @@ a.btn, button.btn, input[type=submit].btn {
       line-height: 20px; }
       a.btn.btn-solid-caution.btn-mini.btn-circle, button.btn.btn-solid-caution.btn-mini.btn-circle, input[type=submit].btn.btn-solid-caution.btn-mini.btn-circle {
         line-height: 74.5px; }
-  a.btn.btn-bdb, button.btn.btn-bdb, input[type=submit].btn.btn-bdb {
-    border-bottom: solid 2px #cccccc;
-    background-color: #e6e6e6;
-    color: #666666; }
-    a.btn.btn-bdb:hover, button.btn.btn-bdb:hover, input[type=submit].btn.btn-bdb:hover {
-      background-color: whitesmoke;
-      border-bottom-color: #dbdbdb; }
-    a.btn.btn-bdb:active, button.btn.btn-bdb:active, input[type=submit].btn.btn-bdb:active {
-      background-color: #dbdbdb;
-      border-bottom-width: 0;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-bdb-primary, button.btn.btn-bdb-primary, input[type=submit].btn.btn-bdb-primary {
-    border-bottom: solid 2px #1658c9;
-    background-color: #2a70e8;
-    color: white; }
-    a.btn.btn-bdb-primary:hover, button.btn.btn-bdb-primary:hover, input[type=submit].btn.btn-bdb-primary:hover {
-      background-color: #4683eb;
-      border-bottom-color: #1964e5; }
-    a.btn.btn-bdb-primary:active, button.btn.btn-bdb-primary:active, input[type=submit].btn.btn-bdb-primary:active {
-      background-color: #1964e5;
-      border-bottom-width: 0;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-bdb-success, button.btn.btn-bdb-success, input[type=submit].btn.btn-bdb-success {
-    border-bottom: solid 2px #35ac46;
-    background-color: #4cc85e;
-    color: white; }
-    a.btn.btn-bdb-success:hover, button.btn.btn-bdb-success:hover, input[type=submit].btn.btn-bdb-success:hover {
-      background-color: #63cf73;
-      border-bottom-color: #3cc350; }
-    a.btn.btn-bdb-success:active, button.btn.btn-bdb-success:active, input[type=submit].btn.btn-bdb-success:active {
-      background-color: #3cc350;
-      border-bottom-width: 0;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-bdb-info, button.btn.btn-bdb-info, input[type=submit].btn.btn-bdb-info {
-    border-bottom: solid 2px #149ef2;
-    background-color: #44b2f5;
-    color: white; }
-    a.btn.btn-bdb-info:hover, button.btn.btn-bdb-info:hover, input[type=submit].btn.btn-bdb-info:hover {
-      background-color: #61bef7;
-      border-bottom-color: #31aaf4; }
-    a.btn.btn-bdb-info:active, button.btn.btn-bdb-info:active, input[type=submit].btn.btn-bdb-info:active {
-      background-color: #31aaf4;
-      border-bottom-width: 0;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-bdb-warning, button.btn.btn-bdb-warning, input[type=submit].btn.btn-bdb-warning {
-    border-bottom: solid 2px #ffbe0c;
-    background-color: #ffcc3f;
-    color: white; }
-    a.btn.btn-bdb-warning:hover, button.btn.btn-bdb-warning:hover, input[type=submit].btn.btn-bdb-warning:hover {
-      background-color: #ffd45e;
-      border-bottom-color: #ffc72b; }
-    a.btn.btn-bdb-warning:active, button.btn.btn-bdb-warning:active, input[type=submit].btn.btn-bdb-warning:active {
-      background-color: #ffc72b;
-      border-bottom-width: 0;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-bdb-danger, button.btn.btn-bdb-danger, input[type=submit].btn.btn-bdb-danger {
-    border-bottom: solid 2px #c22d18;
-    background-color: #e54028;
-    color: white; }
-    a.btn.btn-bdb-danger:hover, button.btn.btn-bdb-danger:hover, input[type=submit].btn.btn-bdb-danger:hover {
-      background-color: #e85843;
-      border-bottom-color: #de341b; }
-    a.btn.btn-bdb-danger:active, button.btn.btn-bdb-danger:active, input[type=submit].btn.btn-bdb-danger:active {
-      background-color: #de341b;
-      border-bottom-width: 0;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-bdb-hot, button.btn.btn-bdb-hot, input[type=submit].btn.btn-bdb-hot {
-    border-bottom: solid 2px #cc3600;
-    background-color: #ff4400;
-    color: white; }
-    a.btn.btn-bdb-hot:hover, button.btn.btn-bdb-hot:hover, input[type=submit].btn.btn-bdb-hot:hover {
-      background-color: #ff5a1f;
-      border-bottom-color: #eb3f00; }
-    a.btn.btn-bdb-hot:active, button.btn.btn-bdb-hot:active, input[type=submit].btn.btn-bdb-hot:active {
-      background-color: #eb3f00;
-      border-bottom-width: 0;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-bdb-night, button.btn.btn-bdb-night, input[type=submit].btn.btn-bdb-night {
-    border-bottom: solid 2px #181b22;
-    background-color: #2e333f;
-    color: white; }
-    a.btn.btn-bdb-night:hover, button.btn.btn-bdb-night:hover, input[type=submit].btn.btn-bdb-night:hover {
-      background-color: #3b4151;
-      border-bottom-color: #252933; }
-    a.btn.btn-bdb-night:active, button.btn.btn-bdb-night:active, input[type=submit].btn.btn-bdb-night:active {
-      background-color: #252933;
-      border-bottom-width: 0;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-bdb-dawn, button.btn.btn-bdb-dawn, input[type=submit].btn.btn-bdb-dawn {
-    border-bottom: solid 2px #fff4b0;
-    background-color: #fffbe3;
-    color: white; }
-    a.btn.btn-bdb-dawn:hover, button.btn.btn-bdb-dawn:hover, input[type=submit].btn.btn-bdb-dawn:hover {
-      background-color: white;
-      border-bottom-color: #fff8cc; }
-    a.btn.btn-bdb-dawn:active, button.btn.btn-bdb-dawn:active, input[type=submit].btn.btn-bdb-dawn:active {
-      background-color: #fff8cf;
-      border-bottom-width: 0;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-bdb-fresh, button.btn.btn-bdb-fresh, input[type=submit].btn.btn-bdb-fresh {
-    border-bottom: solid 2px #5a8200;
-    background-color: #7db500;
-    color: white; }
-    a.btn.btn-bdb-fresh:hover, button.btn.btn-bdb-fresh:hover, input[type=submit].btn.btn-bdb-fresh:hover {
-      background-color: #92d400;
-      border-bottom-color: #6fa100; }
-    a.btn.btn-bdb-fresh:active, button.btn.btn-bdb-fresh:active, input[type=submit].btn.btn-bdb-fresh:active {
-      background-color: #6fa100;
-      border-bottom-width: 0;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-bdb-forest, button.btn.btn-bdb-forest, input[type=submit].btn.btn-bdb-forest {
-    border-bottom: solid 2px #006500;
-    background-color: #009800;
-    color: white; }
-    a.btn.btn-bdb-forest:hover, button.btn.btn-bdb-forest:hover, input[type=submit].btn.btn-bdb-forest:hover {
-      background-color: #00b700;
-      border-bottom-color: #008400; }
-    a.btn.btn-bdb-forest:active, button.btn.btn-bdb-forest:active, input[type=submit].btn.btn-bdb-forest:active {
-      background-color: #008400;
-      border-bottom-width: 0;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
-  a.btn.btn-bdb-dream, button.btn.btn-bdb-dream, input[type=submit].btn.btn-bdb-dream {
-    border-bottom: solid 2px #632466;
-    background-color: #87318c;
-    color: white; }
-    a.btn.btn-bdb-dream:hover, button.btn.btn-bdb-dream:hover, input[type=submit].btn.btn-bdb-dream:hover {
-      background-color: #9d39a3;
-      border-bottom-color: #782c7d; }
-    a.btn.btn-bdb-dream:active, button.btn.btn-bdb-dream:active, input[type=submit].btn.btn-bdb-dream:active {
-      background-color: #782c7d;
-      border-bottom-width: 0;
-      -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -ms-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      -o-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
-      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white; }
   a.btn.btn-bdb-caution, button.btn.btn-bdb-caution, input[type=submit].btn.btn-bdb-caution {
     border-bottom: solid 2px #bf7004;
     background-color: #f18d05;

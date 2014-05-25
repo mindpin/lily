@@ -63,15 +63,15 @@ body.lily-example-doc {
 
         border-radius:$border-radius-default;
 
-        @each $key in map-keys($black-colors) {
-          &.black-#{$key} {
-            background-color: map-get($black-colors, $key);
+        @for $i from 1 through 9 {
+          &.black-#{$i * 10} {
+            background-color: nth($black-colors, $i);
           }
         }
 
-        @each $key in map-keys($area-colors) {
-          &.area-#{$key} {
-            background-color: map-get($area-colors, $key);
+        @for $i from 1 through 12 {
+          &.area-#{nth($area-color-names, $i)} {
+            background-color: nth($area-colors, $i);
           }
         }
       }

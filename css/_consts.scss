@@ -40,31 +40,46 @@ $border-color-default: #ddd !default;
 $on-dev-color: #BB0000;
 
 $black-colors: (
-  10: $black-10,
-  20: $black-20,
-  30: $black-30,
-  40: $black-40,
-  50: $black-50,
-  60: $black-60,
-  70: $black-70,
-  80: $black-80,
-  90: $black-90,
+  $black-10,
+  $black-20,
+  $black-30,
+  $black-40,
+  $black-50,
+  $black-60,
+  $black-70,
+  $black-80,
+  $black-90,
+) !default;
+
+$area-color-names: (
+  primary,
+  success,
+  info,
+  warning,
+  danger,
+  hot,
+  night,
+  dawn,
+  fresh,
+  forest,
+  dream,
+  caution,
 ) !default;
 
 $area-colors: (
-  primary:  $area-primary,
-  success:  $area-success,
-  info:     $area-info,
-  warning:  $area-warning,
-  danger:   $area-danger,
-  hot:      $area-hot,
-  night:    $area-night,
-  dawn:     $area-dawn,
-  fresh:    $area-fresh,
-  forest:   $area-forest,
-  dream:    $area-dream,
-  caution:  $area-caution
-);
+  $area-primary,
+  $area-success,
+  $area-info,
+  $area-warning,
+  $area-danger,
+  $area-hot,
+  $area-night,
+  $area-dawn,
+  $area-fresh,
+  $area-forest,
+  $area-dream,
+  $area-caution,
+) !default;
 
 // 文字
 // -----------------

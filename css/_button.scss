@@ -205,42 +205,27 @@ $button-circle-solid-border-width: 4px;
 a.btn, button.btn, input[type=submit].btn {
   @include -button-base;
 
-  &.btn-flat {
-    @include -button-flat($text-color: $black-60);
-  }
+  &.btn-flat  { @include -button-flat($text-color: $black-60); }
+  &.btn-solid { @include -button-solid($text-color: $black-60); }
+  &.btn-bdb   { @include -button-bdb($text-color: $black-60); }
 
-  @each $key in map-keys($area-colors) {
+  @for $i from 1 through 12 {
+    $key: nth($area-color-names, $i);
+    $bg-color: nth($area-colors, $i);
+    $text-color: -text-color($key);
+
     &.btn-flat-#{$key} {
-      $bg-color: map-get($area-colors, $key);
-      $text-color: -text-color($key);
       @include -button-flat($bg-color, $text-color);
     }
-  }
 
-  &.btn-solid {
-    @include -button-solid($text-color: $black-60);
-  }
-
-  @each $key in map-keys($area-colors) {
     &.btn-solid-#{$key} {
-      $bg-color: map-get($area-colors, $key);
-      $text-color: -text-color($key);
       @include -button-solid($bg-color, $text-color);
     }
-  }
 
-  &.btn-bdb {
-    @include -button-bdb($text-color: $black-60);
-  }
-
-  @each $key in map-keys($area-colors) {
     &.btn-bdb-#{$key} {
-      $bg-color: map-get($area-colors, $key);
-      $text-color: -text-color($key);
       @include -button-bdb($bg-color, $text-color);
     }
   }
-  
 
   @include -button-rounded;
   @include -button-pill;
