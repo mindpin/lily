@@ -428,17 +428,212 @@
                 <div class='color-const area-fresh'></div>
                 <div class='color-const area-forest'></div>
                 <div class='color-const area-dream'></div>
+                <div class='color-const area-caution'></div>
               </div>
             </div>
             <div class='code-highlight'>
               <div class="CodeRay">
-                <div class="code"><pre><span style="color:#037">$area-primary</span>: <span style="color:#0A0">#2A70E8</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;<span style="color:#037">$area-success</span>: <span style="color:#0A0">#4CC85E</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;<span style="color:#037">$area-info</span>:    <span style="color:#0A0">#44B2F5</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;<span style="color:#037">$area-warning</span>: <span style="color:#0A0">#FFCC3F</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;<span style="color:#037">$area-danger</span>:  <span style="color:#0A0">#F15837</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;&#x000A;<span style="color:#037">$area-hot</span>:     <span style="color:#0A0">#FF4400</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;<span style="color:#037">$area-night</span>:   <span style="color:#0A0">#2E333F</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;<span style="color:#037">$area-dawn</span>:    <span style="color:#0A0">#FFFBE3</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;<span style="color:#037">$area-fresh</span>:   <span style="color:#0A0">#6FBC00</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;<span style="color:#037">$area-forest</span>:  <span style="color:#0A0">#009800</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;<span style="color:#037">$area-dream</span>:   <span style="color:#0A0">#6f5499</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;</pre></div>
+                <div class="code"><pre><span style="color:#037">$area-primary</span>: <span style="color:#0A0">#2A70E8</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;<span style="color:#037">$area-success</span>: <span style="color:#0A0">#4CC85E</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;<span style="color:#037">$area-info</span>:    <span style="color:#0A0">#44B2F5</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;<span style="color:#037">$area-warning</span>: <span style="color:#0A0">#FFCC3F</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;<span style="color:#037">$area-danger</span>:  <span style="color:#0A0">#F15837</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;&#x000A;<span style="color:#037">$area-hot</span>:     <span style="color:#0A0">#FF4400</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;<span style="color:#037">$area-night</span>:   <span style="color:#0A0">#2E333F</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;<span style="color:#037">$area-dawn</span>:    <span style="color:#0A0">#FFFBE3</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;<span style="color:#037">$area-fresh</span>:   <span style="color:#0A0">#6FBC00</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;<span style="color:#037">$area-forest</span>:  <span style="color:#0A0">#009800</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;<span style="color:#037">$area-dream</span>:   <span style="color:#0A0">#6f5499</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>;&#x000A;<span style="color:#037">$area-caution</span>: <span style="color:#0A0">#F18D05</span> <span style="color:#F00;background-color:#FAA">!</span><span style="color:#088">default</span>; &#x000A;</pre></div>
               </div>
             </div>
             <p>这些颜色值常量可以用在其他工程的任何地方。以 SASS 变量的形式来引用。当然，从网页设计保持简洁明快的角度来说，一个网页用到的颜色趋于单一为好，所以这些颜色常量也只是给出一些可能的选择。</p>
             <div class='code-highlight'>
               <div class="CodeRay">
                 <div class="code"><pre><span style="color:#070;font-weight:bold">a</span><span style="color:#B06;font-weight:bold">.follow</span> {&#x000A;  <span style="color:#606">background-color</span>: <span style="color:#037">$area-success</span>;&#x000A;}&#x000A;&#x000A;<span style="color:#037">$desc-bg-color</span>: <span style="color:#037">$area-dawn</span>;&#x000A;<span style="color:#B06;font-weight:bold">.desc</span> {&#x000A;  <span style="color:#606">background-color</span>: <span style="color:#037">$desc-bg-color</span>;&#x000A;}</pre></div>
+              </div>
+            </div>
+          </div>
+          <div class='example-section'>
+            <h1 class='header-title'>按钮</h1>
+            <p class='lead'>
+              <span>一些常见的按钮样式，可以被用在</span>
+              <code>&lt;a&gt;</code>
+              <span>标签上。</span>
+            </p>
+            <h3>扁平化样式（flat）</h3>
+            <p>
+              样式名后面可以附加颜色名，
+              所有颜色常量都可以使用，比较推荐的是这几种：
+              <code>info</code>
+              <code>fresh</code>
+              <code>caution</code>
+              <code>danger</code>
+              <code>dream</code>
+              <br>
+              当不附加颜色名时，按钮是默认灰色。
+            </p>
+            <p>首先，最普通的样式是方角样式：</p>
+            <div class='example'>
+              <a class='btn btn-flat' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-flat-info' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-flat-fresh' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-flat-caution' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-flat-danger' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-flat-dream' href='javascript:void(0);'>我是按钮</a>
+            </div>
+            <div class='code-highlight'>
+              <div class="CodeRay">
+                <div class="code"><pre><span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-flat</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-flat-info</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-flat-fresh</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-flat-caution</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-flat-danger</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-flat-dream</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;</pre></div>
+              </div>
+            </div>
+            <p>圆角样式，也很常用：<code>btn-rounded</code></p>
+            <div class='example'>
+              <a class='btn btn-rounded btn-flat' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-rounded btn-flat-info' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-rounded btn-flat-fresh' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-rounded btn-flat-caution' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-rounded btn-flat-danger' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-rounded btn-flat-dream' href='javascript:void(0);'>我是按钮</a>
+            </div>
+            <div class='code-highlight'>
+              <div class="CodeRay">
+                <div class="code"><pre><span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-rounded</span><span style="color:#B06;font-weight:bold">.btn-flat</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-rounded</span><span style="color:#B06;font-weight:bold">.btn-flat-info</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-rounded</span><span style="color:#B06;font-weight:bold">.btn-flat-fresh</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-rounded</span><span style="color:#B06;font-weight:bold">.btn-flat-caution</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-rounded</span><span style="color:#B06;font-weight:bold">.btn-flat-danger</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-rounded</span><span style="color:#B06;font-weight:bold">.btn-flat-dream</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;</pre></div>
+              </div>
+            </div>
+            <p>药丸样式，长得像药丸：<code>btn-pill</code></p>
+            <div class='example'>
+              <a class='btn btn-pill btn-flat' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-pill btn-flat-info' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-pill btn-flat-fresh' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-pill btn-flat-caution' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-pill btn-flat-danger' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-pill btn-flat-dream' href='javascript:void(0);'>我是按钮</a>
+            </div>
+            <div class='code-highlight'>
+              <div class="CodeRay">
+                <div class="code"><pre><span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-pill</span><span style="color:#B06;font-weight:bold">.btn-flat</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-pill</span><span style="color:#B06;font-weight:bold">.btn-flat-info</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-pill</span><span style="color:#B06;font-weight:bold">.btn-flat-fresh</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-pill</span><span style="color:#B06;font-weight:bold">.btn-flat-caution</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-pill</span><span style="color:#B06;font-weight:bold">.btn-flat-danger</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-pill</span><span style="color:#B06;font-weight:bold">.btn-flat-dream</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;</pre></div>
+              </div>
+            </div>
+            <p>圆形样式，大小是固定的，不随文字变化，用的不多：<code>btn-circle</code></p>
+            <div class='example'>
+              <a class='btn btn-circle btn-flat' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-circle btn-flat-info' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-circle btn-flat-fresh' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-circle btn-flat-caution' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-circle btn-flat-danger' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-circle btn-flat-dream' href='javascript:void(0);'>我是按钮</a>
+            </div>
+            <div class='code-highlight'>
+              <div class="CodeRay">
+                <div class="code"><pre><span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-circle</span><span style="color:#B06;font-weight:bold">.btn-flat</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-circle</span><span style="color:#B06;font-weight:bold">.btn-flat-info</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-circle</span><span style="color:#B06;font-weight:bold">.btn-flat-fresh</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-circle</span><span style="color:#B06;font-weight:bold">.btn-flat-caution</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-circle</span><span style="color:#B06;font-weight:bold">.btn-flat-danger</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-circle</span><span style="color:#B06;font-weight:bold">.btn-flat-dream</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;&#x000A;</pre></div>
+              </div>
+            </div>
+            <h3>按钮图标</h3>
+            <p>Lily 内嵌了 FontAwesome 图标系统，可以用在按钮上。</p>
+            <div class='example'>
+              <a class='btn btn-rounded btn-flat' href='javascript:void(0);'>
+                <i class='fa fa-github'></i>
+                <span>我是按钮</span>
+              </a>
+              <a class='btn btn-rounded btn-flat-info' href='javascript:void(0);'>
+                <i class='fa fa-refresh'></i>
+                <span>我是按钮</span>
+              </a>
+              <a class='btn btn-rounded btn-flat-fresh' href='javascript:void(0);'>
+                <i class='fa fa-cloud'></i>
+                <span>我是按钮</span>
+              </a>
+              <a class='btn btn-rounded btn-flat-caution' href='javascript:void(0);'>
+                <i class='fa fa-camera'></i>
+                <span>我是按钮</span>
+              </a>
+              <a class='btn btn-rounded btn-flat-danger' href='javascript:void(0);'>
+                <i class='fa fa-code'></i>
+                <span>我是按钮</span>
+              </a>
+              <a class='btn btn-rounded btn-flat-dream' href='javascript:void(0);'>
+                <i class='fa fa-envelope'></i>
+                <span>我是按钮</span>
+              </a>
+            </div>
+            <div class='code-highlight'>
+              <div class="CodeRay">
+                <div class="code"><pre><span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-rounded</span><span style="color:#B06;font-weight:bold">.btn-flat</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} &#x000A;  <span style="color:#070;font-weight:bold">%i</span><span style="color:#B06;font-weight:bold">.fa</span><span style="color:#B06;font-weight:bold">.fa-github</span>&#x000A;  <span style="color:#070;font-weight:bold">%span</span> 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-rounded</span><span style="color:#B06;font-weight:bold">.btn-flat-info</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} &#x000A;  <span style="color:#070;font-weight:bold">%i</span><span style="color:#B06;font-weight:bold">.fa</span><span style="color:#B06;font-weight:bold">.fa-refresh</span>&#x000A;  <span style="color:#070;font-weight:bold">%span</span> 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-rounded</span><span style="color:#B06;font-weight:bold">.btn-flat-fresh</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} &#x000A;  <span style="color:#070;font-weight:bold">%i</span><span style="color:#B06;font-weight:bold">.fa</span><span style="color:#B06;font-weight:bold">.fa-cloud</span>&#x000A;  <span style="color:#070;font-weight:bold">%span</span> 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-rounded</span><span style="color:#B06;font-weight:bold">.btn-flat-caution</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} &#x000A;  <span style="color:#070;font-weight:bold">%i</span><span style="color:#B06;font-weight:bold">.fa</span><span style="color:#B06;font-weight:bold">.fa-camera</span>&#x000A;  <span style="color:#070;font-weight:bold">%span</span> 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-rounded</span><span style="color:#B06;font-weight:bold">.btn-flat-danger</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} &#x000A;  <span style="color:#070;font-weight:bold">%i</span><span style="color:#B06;font-weight:bold">.fa</span><span style="color:#B06;font-weight:bold">.fa-code</span>&#x000A;  <span style="color:#070;font-weight:bold">%span</span> 我是按钮&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-rounded</span><span style="color:#B06;font-weight:bold">.btn-flat-dream</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} &#x000A;  <span style="color:#070;font-weight:bold">%i</span><span style="color:#B06;font-weight:bold">.fa</span><span style="color:#B06;font-weight:bold">.fa-envelope</span>&#x000A;  <span style="color:#070;font-weight:bold">%span</span> 我是按钮&#x000A;</pre></div>
+              </div>
+            </div>
+            <h3>立体样式（solid）</h3>
+            <p>使用 <code>btn-solid-</code> 样式来产生立体按钮</p>
+            <div class='example'>
+              <a class='btn btn-rounded btn-solid' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-pill btn-solid-info' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-solid-fresh' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-circle btn-solid-caution' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-rounded btn-solid-danger' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-rounded btn-solid-dream' href='javascript:void(0);'>我是按钮</a>
+            </div>
+            <div class='code-highlight'>
+              <div class="CodeRay">
+                <div class="code"><pre><span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-rounded</span><span style="color:#B06;font-weight:bold">.btn-solid-dream</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;</pre></div>
+              </div>
+            </div>
+            <h3>底边样式（bdb）</h3>
+            <p>使用 <code>btn-solid-</code> 样式来产生立体按钮</p>
+            <div class='example'>
+              <a class='btn btn-rounded btn-bdb' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-pill btn-bdb-info' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-bdb-fresh' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-circle btn-bdb-caution' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-rounded btn-bdb-danger' href='javascript:void(0);'>我是按钮</a>
+              <a class='btn btn-rounded btn-bdb-dream' href='javascript:void(0);'>我是按钮</a>
+            </div>
+            <div class='code-highlight'>
+              <div class="CodeRay">
+                <div class="code"><pre><span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-rounded</span><span style="color:#B06;font-weight:bold">.btn-solid-dream</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;</pre></div>
+              </div>
+            </div>
+            <h3>全宽按钮</h3>
+            <p>使用 <code>btn-block</code> 样式来产生全宽按钮</p>
+            <div class='example'>
+              <a class='btn btn-block btn-rounded btn-flat' href='javascript:void(0);'>我是按钮</a>
+              <br>
+              <a class='btn btn-block btn-pill btn-solid-info' href='javascript:void(0);'>我是按钮</a>
+              <br>
+              <a class='btn btn-block btn-solid-fresh' href='javascript:void(0);'>我是按钮</a>
+              <br>
+              <a class='btn btn-block btn-pill btn-flat-caution btn-large' href='javascript:void(0);'>我是按钮</a>
+            </div>
+            <div class='code-highlight'>
+              <div class="CodeRay">
+                <div class="code"><pre><span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-block</span><span style="color:#B06;font-weight:bold">.btn-rounded</span><span style="color:#B06;font-weight:bold">.btn-flat</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 我是按钮&#x000A;</pre></div>
+              </div>
+            </div>
+            <h3>按钮大小</h3>
+            <p>可以通过 <code>large</code> <code>small</code> <code>mini</code> 给按钮指定不同的大小</p>
+            <div class='example'>
+              <button class='btn btn-rounded btn-flat-caution btn-jumbo'>超大按钮</button>
+              <button class='btn btn-rounded btn-flat-caution btn-large'>大按钮</button>
+              <button class='btn btn-rounded btn-flat-caution'>普通按钮</button>
+              <button class='btn btn-rounded btn-flat-caution btn-small'>小按钮</button>
+              <button class='btn btn-rounded btn-flat-caution btn-mini'>迷你按钮</button>
+              <button class='btn btn-circle btn-flat-info btn-jumbo'>超大按钮</button>
+              <button class='btn btn-circle btn-flat-info btn-large'>大按钮</button>
+              <button class='btn btn-circle btn-flat-info'>普通按钮</button>
+              <button class='btn btn-circle btn-flat-info btn-small'>小按钮</button>
+              <button class='btn btn-circle btn-flat-info btn-mini'>迷你按钮</button>
+              <button class='btn btn-circle btn-solid-fresh btn-jumbo'>超大按钮</button>
+              <button class='btn btn-circle btn-solid-fresh btn-large'>大按钮</button>
+              <button class='btn btn-circle btn-solid-fresh'>普通按钮</button>
+              <button class='btn btn-circle btn-solid-fresh btn-small'>小按钮</button>
+              <button class='btn btn-circle btn-solid-fresh btn-mini'>迷你按钮</button>
+            </div>
+            <h3>表单组件</h3>
+            <div class='example'>
+              <input class='btn btn-rounded btn-flat-fresh' type='submit' value='确定提交'>
+              <a class='btn btn-rounded btn-solid' href='javascript:void(0);'>取消</a>
+              <button class='btn btn-rounded btn-flat-danger'>
+                <i class='fa fa-trash-o'></i>
+                <span>删除</span>
+              </button>
+              <input class='btn btn-rounded btn-flat-fresh' disabled type='submit' value='确定提交'>
+              <a class='btn btn-circle btn-solid disabled' href='javascript:void(0);'>取消</a>
+              <button class='btn btn-pill btn-flat-danger disabled btn-large'>
+                <i class='fa fa-trash-o'></i>
+                <span>删除</span>
+              </button>
+            </div>
+            <div class='code-highlight'>
+              <div class="CodeRay">
+                <div class="code"><pre><span style="color:#070;font-weight:bold">%input</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-rounded</span><span style="color:#B06;font-weight:bold">.btn-flat-fresh</span>{<span style="color:#A60">:type</span> =&gt; <span style="color:#A60">:submit</span>, <span style="color:#A60">:value</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">确定提交</span><span style="color:#710">'</span></span>}&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-rounded</span><span style="color:#B06;font-weight:bold">.btn-solid</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 取消&#x000A;<span style="color:#070;font-weight:bold">%button</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-rounded</span><span style="color:#B06;font-weight:bold">.btn-flat-danger</span>&#x000A;  <span style="color:#070;font-weight:bold">%i</span><span style="color:#B06;font-weight:bold">.fa</span><span style="color:#B06;font-weight:bold">.fa-trash-o</span>&#x000A;  <span style="color:#070;font-weight:bold">%span</span> 删除&#x000A;&#x000A;<span style="color:#070;font-weight:bold">%input</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-rounded</span><span style="color:#B06;font-weight:bold">.btn-flat-fresh</span>{<span style="color:#A60">:type</span> =&gt; <span style="color:#A60">:submit</span>, <span style="color:#A60">:value</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">确定提交</span><span style="color:#710">'</span></span>, <span style="color:#A60">:disabled</span> =&gt; <span style="color:#069">true</span>}&#x000A;<span style="color:#070;font-weight:bold">%a</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-circle</span><span style="color:#B06;font-weight:bold">.btn-solid</span><span style="color:#B06;font-weight:bold">.disabled</span>{<span style="color:#A60">:href</span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">javascript:void(0);</span><span style="color:#710">'</span></span>} 取消&#x000A;<span style="color:#070;font-weight:bold">%button</span><span style="color:#B06;font-weight:bold">.btn</span><span style="color:#B06;font-weight:bold">.btn-pill</span><span style="color:#B06;font-weight:bold">.btn-flat-danger</span><span style="color:#B06;font-weight:bold">.disabled</span><span style="color:#B06;font-weight:bold">.btn-large</span>&#x000A;  <span style="color:#070;font-weight:bold">%i</span><span style="color:#B06;font-weight:bold">.fa</span><span style="color:#B06;font-weight:bold">.fa-trash-o</span>&#x000A;  <span style="color:#070;font-weight:bold">%span</span> 删除</pre></div>
               </div>
             </div>
           </div>

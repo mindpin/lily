@@ -3,7 +3,7 @@
 
 body.lily-example-doc {
   .doc-head {
-    background-color: #4CBE98;
+    background-color: $area-success;
     padding:50px 15px;
     margin-bottom: 40px;
 
@@ -63,28 +63,17 @@ body.lily-example-doc {
 
         border-radius:$border-radius-default;
 
-        &.black-10 {background-color: $black-10;}
-        &.black-20 {background-color: $black-20;}
-        &.black-30 {background-color: $black-30;}
-        &.black-40 {background-color: $black-40;}
-        &.black-50 {background-color: $black-50;}
-        &.black-60 {background-color: $black-60;}
-        &.black-70 {background-color: $black-70;}
-        &.black-80 {background-color: $black-80;}
-        &.black-90 {background-color: $black-90;}
+        @each $key in map-keys($black-colors) {
+          &.black-#{$key} {
+            background-color: map-get($black-colors, $key);
+          }
+        }
 
-        &.area-primary {background-color: $area-primary;}
-        &.area-success {background-color: $area-success;}
-        &.area-info    {background-color: $area-info;}
-        &.area-warning {background-color: $area-warning;}
-        &.area-danger  {background-color: $area-danger;}
-
-        &.area-hot     {background-color: $area-hot;}
-        &.area-night   {background-color: $area-night;}
-        &.area-dawn    {background-color: $area-dawn;}
-        &.area-fresh   {background-color: $area-fresh;}
-        &.area-forest  {background-color: $area-forest;}
-        &.area-dream   {background-color: $area-dream;}
+        @each $key in map-keys($area-colors) {
+          &.area-#{$key} {
+            background-color: map-get($area-colors, $key);
+          }
+        }
       }
     }
   }

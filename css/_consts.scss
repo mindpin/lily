@@ -25,18 +25,46 @@ $area-primary: #2A70E8 !default;
 $area-success: #4CC85E !default;
 $area-info:    #44B2F5 !default;
 $area-warning: #FFCC3F !default;
-$area-danger:  #F15837 !default;
+$area-danger:  #E54028 !default;
 
 $area-hot:     #FF4400 !default;
 $area-night:   #2E333F !default;
 $area-dawn:    #FFFBE3 !default;
-$area-fresh:   #6FBC00 !default;
+$area-fresh:   #7DB500 !default;
 $area-forest:  #009800 !default;
-$area-dream:   #6f5499 !default;
+$area-dream:   #87318C !default;
+$area-caution: #F18D05 !default; 
 
 $border-color-default: #ddd !default;
 
 $on-dev-color: #BB0000;
+
+$black-colors: (
+  10: $black-10,
+  20: $black-20,
+  30: $black-30,
+  40: $black-40,
+  50: $black-50,
+  60: $black-60,
+  70: $black-70,
+  80: $black-80,
+  90: $black-90,
+) !default;
+
+$area-colors: (
+  primary:  $area-primary,
+  success:  $area-success,
+  info:     $area-info,
+  warning:  $area-warning,
+  danger:   $area-danger,
+  hot:      $area-hot,
+  night:    $area-night,
+  dawn:     $area-dawn,
+  fresh:    $area-fresh,
+  forest:   $area-forest,
+  dream:    $area-dream,
+  caution:  $area-caution
+);
 
 // 文字
 // -----------------
