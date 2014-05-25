@@ -98,9 +98,10 @@ $button-circle-solid-border-width: 4px;
 }
 
 @mixin -button-bdb($bg-color: $black-10, $text-color: white) {
-  border-bottom: solid 2px darken($bg-color, 10%);
   background-color: $bg-color;
   color: $text-color;
+  border: 0 none;
+  border-bottom: solid 2px darken($bg-color, 10%);
 
   &:hover { 
     background-color: lighten($bg-color, 6%);

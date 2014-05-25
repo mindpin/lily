@@ -39,7 +39,7 @@ $border-color-default: #ddd !default;
 
 $on-dev-color: #BB0000;
 
-$black-colors: (
+$black-colors: 
   $black-10,
   $black-20,
   $black-30,
@@ -48,10 +48,10 @@ $black-colors: (
   $black-60,
   $black-70,
   $black-80,
-  $black-90,
-) !default;
+  $black-90
+!default;
 
-$area-color-names: (
+$area-color-names:
   primary,
   success,
   info,
@@ -63,10 +63,10 @@ $area-color-names: (
   fresh,
   forest,
   dream,
-  caution,
-) !default;
+  caution
+!default;
 
-$area-colors: (
+$area-colors:
   $area-primary,
   $area-success,
   $area-info,
@@ -78,8 +78,8 @@ $area-colors: (
   $area-fresh,
   $area-forest,
   $area-dream,
-  $area-caution,
-) !default;
+  $area-caution
+!default;
 
 // 文字
 // -----------------
@@ -90,7 +90,7 @@ $link-color: #4183c4 !default;
 // $link-color: #0072D6 !default;
 $link-hover-color: darken($link-color, 15%) !default;
 
-$font-family-cn: "微软雅黑";
+$font-family-cn: "微软雅黑" !default;
 
 $font-family-sans-serif: 
   "Helvetica Neue", "Helvetica", "Arial", "sans-serif", $font-family-cn !default;
