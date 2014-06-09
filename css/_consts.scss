@@ -93,7 +93,7 @@ $link-hover-color: darken($link-color, 15%) !default;
 $font-family-cn: "微软雅黑" !default;
 
 $font-family-sans-serif: 
-  "Helvetica Neue", "Helvetica", "Arial", "sans-serif", $font-family-cn !default;
+  "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", "sans-serif", $font-family-cn !default;
 $font-family-serif:
   "Georgia", "Times New Roman", "Times", "serif", $font-family-cn !default;
 // 等宽字体用在 <code> <pre> 等标签中用于显示代码
@@ -132,7 +132,7 @@ $page-title-border-color: $black-10 !default;
 
 // 圆角和其他修饰
 // --------------
-$border-radius-default: 4px;
+$border-radius-default: 4px !default;
 
 
 // 表格
