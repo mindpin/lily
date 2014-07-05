@@ -1,0 +1,91 @@
+/*
+html example:
+
+.piece.piece-shelf
+  .piece.piece-box
+    %h2
+    ....
+
+  .piece.piece-box
+    %h3
+    .piece.piece-ops
+      .op
+        %a{:href => '...'} ...
+
+  .piece.piece-box
+
+
+.piece.piece-shelf.piece-paper
+  .piece.piece-box
+    %h2
+    ....
+
+  .piece.piece-box
+    %h3
+    .piece.piece-ops
+      .op
+        %a{:href => '...'} ...
+
+  .piece.piece-box
+*/
+
+$piece-padding: 20px !default;
+$piece-title-margin-bottom: $piece-padding * 1.5 !default;
+
+@mixin piece {
+  background-color: #FFF;
+  border-radius: $border-radius-default;
+  @include piece-shadow;
+}
+
+@mixin piece-style {
+  h2 {margin-top: 0;margin-bottom: $piece-title-margin-bottom;}
+  h3 {margin-top: 0;margin-bottom: $piece-title-margin-bottom;}
+  h4 {margin-top: 0;margin-bottom: $piece-title-margin-bottom;line-height: 22px;}
+}
+
+@mixin piece-shelf {
+  // nothing
+}
+
+@mixin piece-paper {
+  @include piece;
+  min-height: 300px;
+}
+
+@mixin piece-shadow {
+  box-shadow: 0 1px 2px rgba(black, 0.07);
+}
+
+@mixin piece-box {
+  @include piece-style;
+  padding: $piece-padding;
+  border-bottom: solid 1px #e7e7e7;
+  position: relative;
+
+  &:last-child {
+    border-bottom: 0 none;
+  }
+}
+
+.piece.piece-shelf {
+  @include piece-shelf;
+
+  &.piece-paper {
+    @include piece-paper;
+  }
+
+  .piece.piece-box {
+    @include piece-box;
+
+    .piece.piece-ops {
+      position: absolute;
+      top: $piece-padding;
+      right: 0;
+      .op {
+        border-bottom: dashed 1px $black-30;
+        width: 120px;
+      }
+    }
+  }
+}
