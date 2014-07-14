@@ -243,6 +243,9 @@ input[type="date"] {
 
 .form-group {
   margin-bottom: 15px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 

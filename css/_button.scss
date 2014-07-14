@@ -182,17 +182,27 @@ $button-circle-solid-border-width: 4px;
     }
 
     line-height:-button-height(normal) - 2px;
-    &.btn-circle {
-      border:solid 1px #ddd;
-      line-height: -button-height(normal) * 3.75 - 2px;
-    }
-
     @each $style in (jumbo large small mini) {
       &.btn-#{$style} {
         line-height:  -button-height($style) - 2px;
+      }
+    }
 
-        &.btn-circle {
+    &.btn-circle {
+      border:solid 1px #ddd;
+      line-height: -button-height(normal) * 3.75 - 2px;
+      @each $style in (jumbo large small mini) {
+        &.btn-#{$style} {
           line-height: -button-height($style) * 3.75 - 2px;
+        }
+      }
+    }
+
+    &.btn-block {
+      line-height:  -button-height(normal) * 1.1875 - 2px;
+      @each $style in (jumbo large small mini) {
+        &.btn-#{$style} {
+          line-height: -button-height($style) * 1.1875 - 2px;
         }
       }
     }
