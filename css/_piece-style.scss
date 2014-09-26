@@ -1,6 +1,9 @@
+// 扁平化页面区块系统
+
 /*
 html example:
 
+# 无材质
 .piece.piece-shelf
   .piece.piece-box
     %h2
@@ -11,10 +14,16 @@ html example:
     .piece.piece-ops
       .op
         %a{:href => '...'} ...
+      .op
+        %a{:href => '...'} ...
+
+  .piece.piece-box
+    .piece.piece-blank 没有数据
 
   .piece.piece-box
 
 
+# 白底纸材质
 .piece.piece-shelf.piece-paper
   .piece.piece-box
     %h2
@@ -25,6 +34,11 @@ html example:
     .piece.piece-ops
       .op
         %a{:href => '...'} ...
+      .op
+        %a{:href => '...'} ...
+
+  .piece.piece-box
+    .piece.piece-blank 没有数据
 
   .piece.piece-box
 */
@@ -83,9 +97,32 @@ $piece-title-margin-bottom: $piece-padding * 1.5 !default;
       top: $piece-padding;
       right: 0;
       .op {
-        border-bottom: dashed 1px $black-30;
         width: 120px;
+        margin-bottom: 5px;
+        a {
+          display:block;
+          height:20px;line-height:20px;
+          text-decoration:none;
+          border-bottom: dashed 1px $black-30;
+          &:hover {
+            background-color: $area-dawn;
+          }
+        }
+
+        &.danger {
+          a:hover {color:$area-danger;}
+        }
       }
     }
+  }
+
+  .piece.piece-blank {
+    margin: 0 -10px -10px -10px;
+    background-color: #f7f7f7;
+    font-size:16px;
+    line-height:150px;height:150px;
+    text-align:center;
+    border-radius:$border-radius-default;
+    color:$black-50;
   }
 }
