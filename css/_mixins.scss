@@ -69,6 +69,14 @@
   background: linear-gradient(top, $c1, $c2);
 }
 
+@mixin linear-gradient($dir, $c1, $c2) {
+  background: -webkit-linear-gradient($dir, $c1, $c2);
+  background: -moz-linear-gradient($dir, $c1, $c2);
+  background: -ms-linear-gradient($dir, $c1, $c2);
+  background: -o-linear-gradient($dir, $c1, $c2);
+  background: linear-gradient($dir, $c1, $c2);
+}
+
 @mixin unselectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;

@@ -107,6 +107,9 @@ $piece-title-margin-bottom: $piece-padding * 1.5 !default;
           &:hover {
             background-color: $area-dawn;
           }
+          i.fa {
+            width:15px;
+          }
         }
 
         &.danger {
