@@ -53,6 +53,26 @@
   @include prefixer(transform, $params);
 }
 
+@mixin animation($params) {
+  @include prefixer(animation, $params);
+}
+
+@mixin transform-style($params) {
+  @include prefixer(transform-style, $params);
+}
+
+@mixin perspective($params) {
+  @include prefixer(perspective, $params);
+}
+
+@mixin perspective-origin($params) {
+  @include prefixer(perspective-origin, $params);
+}
+
+@mixin transform-origin($params) {
+  @include prefixer(transform-origin, $params);
+}
+
 @mixin box-shadow($params...) {
   @include prefixer(box-shadow, $params);
 }
@@ -86,6 +106,12 @@
   user-select: none;
 }
 
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} { @content; }
+  @-moz-keyframes #{$name} { @content; }
+  @-ms-keyframes #{$name} { @content; }
+  @keyframes #{$name} { @content; } 
+}
 
 // _grid.scss
 // ----------
