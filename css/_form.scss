@@ -215,6 +215,13 @@ textarea.form-control {
   height: auto;
 }
 
+input[type="file"].form-control {
+  border:0 none;
+  box-shadow:none;
+  padding: 0;
+  height: auto;
+}
+
 
 // Search inputs in iOS
 //
