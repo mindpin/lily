@@ -52,8 +52,10 @@ $state-warning-text:             #8a6d3b !default;
 $state-warning-bg:               #fcf8e3 !default;
 $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 
-$state-danger-text:              #a94442 !default;
-$state-danger-bg:                #f2dede !default;
+// $state-danger-text:              #a94442 !default;
+// $state-danger-bg:                #f2dede !default;
+$state-danger-text:              $area-danger !default;
+$state-danger-bg:                #fff !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 
 
@@ -210,6 +212,13 @@ output {
 
 // Reset height for `textarea`s
 textarea.form-control {
+  height: auto;
+}
+
+input[type="file"].form-control {
+  border:0 none;
+  box-shadow:none;
+  padding: 0;
   height: auto;
 }
 
