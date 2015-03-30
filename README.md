@@ -38,9 +38,9 @@ git submodule add git@github.com:mindpin/lily.git vendor/assets/lily
 ```
 [submodule "vendor/assets/lily"]
   path = vendor/assets/lily
-  url = git://github.com/mindpin/lily.git
+  url = https://github.com/mindpin/lily.git
 ```
-主要是 url 要改成 git:// 开头
+主要是 url 要改成 https:// 开头
 
 3. 修改 application.scss
 
