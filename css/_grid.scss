@@ -11,6 +11,15 @@
   @include -above(wide) { width: $container-wide; }
 }
 
+// 弹性定宽容器 + 大宽屏优化
+.container.xwide {
+  @include -above(wide) { 
+    width: 100%;
+    min-width: $container-wide;
+    max-width: $container-xwide; 
+  }
+}
+
 
 // 全屏宽容器
 .container-fluid,

@@ -214,6 +214,7 @@ $grid-gap: round($font-size-default * 2.143) !default; // 14 * 2.143 = 30.002 ~ 
 $container-pad:   720px + $grid-gap !default;
 $container-desk:  940px + $grid-gap !default;
 $container-wide:  1140px + $grid-gap !default;
+$container-xwide: 1800px;
 
 
 // 中文
