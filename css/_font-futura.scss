@@ -1,10 +1,12 @@
+$futura-font-path: "fonts/futura" !default;
+
 @font-face {
   font-family: "Futura-Condensed";
-  src: url('fonts/futura/Futura-Condensed.eot');
+  src: url('#{$futura-font-path}/Futura-Condensed.eot');
   src: local('☺'), 
-    url('fonts/futura/Futura-Condensed.woff') format("woff"), 
-    url('fonts/futura/Futura-Condensed.ttf') format("truetype"), 
-    url('fonts/futura/Futura-Condensed.svg') format("svg");
+    url('#{$futura-font-path}/Futura-Condensed.woff') format("woff"), 
+    url('#{$futura-font-path}/Futura-Condensed.ttf') format("truetype"), 
+    url('#{$futura-font-path}/Futura-Condensed.svg') format("svg");
   font-weight: normal;
   font-style: normal;
 }
