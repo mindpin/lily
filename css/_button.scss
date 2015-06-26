@@ -1,5 +1,7 @@
 $button-circle-solid-border-width: 4px;
 
+$text-highlight-shadow: 0px 1px 0px rgba(white, 0.2);
+
 @function -button-height($size) {
   @if $size == jumbo {
     @return round($font-size-default * 3.6429); // 51
@@ -54,7 +56,7 @@ $button-circle-solid-border-width: 4px;
   &:hover { background-color: lighten($bg-color, 6%); }
   &:active {
     background-color: darken($bg-color, 4%);
-    @include box-shadow(inset 0px 1px 3px rgba(black, 0.3), 0px 1px 0px white);
+    @include box-shadow(inset 0px 1px 3px rgba(black, 0.3), $text-highlight-shadow);
   }
 }
 
@@ -77,7 +79,7 @@ $button-circle-solid-border-width: 4px;
 
   &:active {
     background: desaturate($bg-color, 20%);
-    @include box-shadow(inset 0px 1px 3px rgba(black, 0.3), 0px 1px 0px white);
+    @include box-shadow(inset 0px 1px 3px rgba(black, 0.3), $text-highlight-shadow);
     color: darken($bg-color, 20%);
     @include text-shadow(0px 1px 0px rgba(white, 0.4));
   }
@@ -111,7 +113,7 @@ $button-circle-solid-border-width: 4px;
   &:active {
     background-color: darken($bg-color, 4%);
     border-bottom-width: 0;
-    @include box-shadow(inset 0px 1px 3px rgba(black, 0.3), 0px 1px 0px white);
+    @include box-shadow(inset 0px 1px 3px rgba(black, 0.3), $text-highlight-shadow);
   }
 }
 

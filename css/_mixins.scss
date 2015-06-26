@@ -49,27 +49,27 @@
   @include prefixer(transition, $params);
 }
 
-@mixin transform($params) {
+@mixin transform($params...) {
   @include prefixer(transform, $params);
 }
 
-@mixin animation($params) {
+@mixin animation($params...) {
   @include prefixer(animation, $params);
 }
 
-@mixin transform-style($params) {
+@mixin transform-style($params...) {
   @include prefixer(transform-style, $params);
 }
 
-@mixin perspective($params) {
+@mixin perspective($params...) {
   @include prefixer(perspective, $params);
 }
 
-@mixin perspective-origin($params) {
+@mixin perspective-origin($params...) {
   @include prefixer(perspective-origin, $params);
 }
 
-@mixin transform-origin($params) {
+@mixin transform-origin($params...) {
   @include prefixer(transform-origin, $params);
 }
 
